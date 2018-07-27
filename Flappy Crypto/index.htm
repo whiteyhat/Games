@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="icon" href="../icons/icon.png">
+
+  <title>Flappy Crypto</title>
+
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    @viewport {
+      width: device-width;
+      max-zoom: 0;
+      orientation: portrait;
+      user-zoom: fixed;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Start Screen -->
+    <div id="start_screen">
+      <h1 id="title">Flappy Crypto</h1>
+      <h3 id="credits">
+        by
+        <a href="https://twitter.com/doncarlosroldan">Carlos Roldan</a>
+        and
+        <a href="https://twitter.com/roquerrt">Roc Chain</a>
+      </h3>
+      <h3 id="last_score"></h3>
+      <h3 id="high_score"></h3>
+
+      <div class="controls"></div>
+
+      <div class="options">
+        <ul>
+          <li>
+            <a href="javascript:void(0);" id="start_game">start</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" target="_blank" id="tweet">tweet</a>
+          </li>
+          <li>
+            <a href="javascript:void(0);" target="_blank" id="fb">Facebook</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /Start Screen -->
+
+    <!-- Loading sounds -->
+    <audio id="start" loop>
+      <source src="sound/pappu-pakia2.3.ogg" type="audio/ogg">
+      <source src="sound/pappu-pakia2.3.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="angry_jump">
+      <source src="sound/jump1.ogg" type="audio/ogg">
+      <source src="sound/jump1.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="sad_jump">
+      <source src="sound/jump2.ogg" type="audio/ogg">
+      <source src="sound/jump2.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="happy_jump">
+      <source src="sound/jump3.ogg" type="audio/ogg">
+      <source src="sound/jump3.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="flap">
+      <source src="sound/flap.ogg" type="audio/ogg">
+      <source src="sound/flap.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="ting">
+      <source src="sound/ting.ogg" type="audio/ogg">
+      <source src="sound/ting.mp3" type="audio/mp3">
+    </audio>
+
+    <canvas id="game_bg"></canvas>
+    <canvas id="game_main"></canvas>
+
+    <div id="score_board">0</div>
+
+    <div id="invincible_timer">
+      <div id="invincible_loader"></div>
+    </div>
+
+    <a href="javascript:void(0)" id="mute"></a>
+
+    <!-- Loading Screen -->
+    <div id="loading">
+      <p id="loadText">Loading...</p>
+      <div id="barCont">
+        <div id="bar"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="fps_count"></div>
+
+
+  <!--footer class="os">
+    <h3>About</h3>
+    <p>
+      This HTML5 Game (Pappu Pakia) has been happily made for
+      the <a href="https://github.com/blog/1303-github-game-off">Github
+      Game Off 2012</a>. Based on the compo's rules, the concepts
+      that we tried to incorporate are fork, branch, push, pull, clone.
+    </p>
+    <p>
+      You are pappu in the game, a little character. You need to
+      click the mouse or tap (touch screen) to levitate else
+      pappu will descend. If he hits the top or bottom boundaries
+      that'll end the game.
+    </p>
+    <p>
+      There will be some obstacles along the way like forks, branches
+      and some enemies who are also known as "pakias". Hitting them
+      will end the game. 3 types of pakias - sad (pull you),
+      happy (push you), angry (kill you). Keep safe distance from
+      them!
+    </p>
+    <p>
+      There are some collectibles too! Coins for points (yellow for 50,
+      pink for 100, red for 500). Stars for invincibility
+      for a short period. Berries spawning clones that'll destroy
+      anything that comes in their way!
+    </p>
+    <p>
+      Collisions are not super strict
+      to make the gameplay a little less harder.
+    </p>
+    <p>
+      Hit Enter or Spacebar keys to (re)start the game.
+    </p>
+
+    <h3>Credits</h3>
+    <p>
+      Handsomely coded by <a href="http://twitter.com/_rishabhp">Rishabh</a>.
+      Beautiful graphics by <a href="http://twitter.com/solitarydesigns">Kushagra</a>. We're freelance web dudes.
+    </p>
+
+    <p>
+      Thanks to <a href="http://rezoner.net/">Rezoner</a> for Music.
+    </p>
+    <p>
+      All other sounds produced by personal thingies like mouths, hands and books.
+      Some tricks and tips that we learnt while making this game
+      has been shared on <a href="http://codetheory.in">CodeTheory</a>
+      and <a href="http://cssdeck.com/codecasts">CSSDeck</a>.
+    </p>
+  </footer-->
+
+  <script src="js/jquery-1.8.2.min.js"></script>
+  <script>window.mit = window.mit || {};</script>
+  <script src="js/utils.js"></script>
+  <script src="js/backgrounds.js"></script>
+  <script src="js/forks.js"></script>
+  <script src="js/branches.js"></script>
+  <script src="js/collectibles.js"></script>
+  <script src="js/pappu.js"></script>
+  <script src="js/pakia.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/loader.js"></script>
+
+  <script>
+    if (location.hostname.indexOf('localhost') === 0) {
+      $('.gads, #disqus_thread').remove();
+    }
+  </script>
+
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36603798-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <center>
+    <div id="score" style="border: 3px dotted white; border-radius: 3px; width: 15%; height: auto;">
+      <h3 id="username" style="color: white;">- TOP SCORES-</h3>
+      <ol>
+        <li id="score" style="font-family: 'Bungee Shade', cursive;color: white;"> Carlos - 16 pts</li>
+        <li id="score" style="font-family: 'Bungee Shade', cursive;color: white;"> Roque - 5 pts</li>
+        <li id="score" style="font-family: 'Bungee Shade', cursive;color: white;"> Lucas - 3 pts</li>
+      </ol>
+    </div>
+  </center>
+
+  <br>
+  <script>
+   
+    var id = localStorage.id;
+    var score = localStorage.highScore;
+
+    console.log(score);
+    console.log(id);
+
+
+   /** document.addEventListener('DOMContentLoaded', () => {
+      let elements = []
+      let container = document.querySelector('#container')
+      // Add each row to the array
+      container.querySelectorAll('.row').forEach(el => elements.push(el))
+      // Clear the container
+      container.innerHTML = ''
+      // Sort the array from highest to lowest
+      elements.sort((a, b) => b.querySelector('.score').textContent - a.querySelector('.score').textContent)
+      // Put the elements back into the container
+      elements.forEach(e => container.appendChild(e))
+    })*/
+      
+  </script>
+  
+</script>
+  <center>
+    <div id="container">
+      <div class="row">
+        <div class="name">Player1</div>
+        <div class="score">430</div>
+      </div>
+
+      <div class="row">
+        <div class="name">Player2</div>
+        <div class="score">580</div>
+      </div>
+
+      <div class="row">
+        <div class="name">Player3</div>
+        <div class="score">310</div>
+      </div>
+
+      <div class="row">
+        <div class="name">Player4</div>
+        <div class="score">640</div>
+      </div>
+
+      <div class="row">
+        <div class="name">Player5</div>
+        <div class="score">495</div>
+      </div>
+
+    </div>
+
+  </center>
+</body>
+
+</html>
