@@ -1,5 +1,5 @@
 # Flappy Crypto
-
+[](https://i.gyazo.com/86ef7bf9f959563bace67c1338de45cc.png)
 This HTML5 Game (Flappy Cryptpo) has been happily made for the
 website [satoshis.games](https://satoshis.games)
 **[PLAY THE GAME HERE](https://flappy.satoshis.games)**
