@@ -1,32 +1,22 @@
-# Pappu Pakia
+# Flappy Crypto
 
-![Pappu Pakia](http://i.imgur.com/zYD37.png)
-
-This HTML5 Game (Pappu Pakia) has been happily made for the
-[Github Game Off 2012](https://github.com/blog/1303-github-game-off).
-
-**[PLAY THE GAME HERE](http://khele.in/pappu-pakia/)**
+This HTML5 Game (Flappy Cryptpo) has been happily made for the
+website [satoshis.games](https://satoshis.games)
+**[PLAY THE GAME HERE](https://flappy.satoshis.games)**
 
 ## Credits
 
-Handsomely coded by [Rishabh](http://twitter.com/_rishabhp).
-Beautiful graphics by [Kushagra](http://twitter.com/solitarydesigns).
-
-## Sharing is Caring <3
-
-Some tricks and tips that we learnt while making this game has been
-shared on [CodeTheory](http://codetheory.in) and
-[CSSDeck](http://cssdeck.com/codecasts).
+Handsomely coded by [Carlos Roldan](http://twitter.com/doncarlosroldan).
 
 ## Game Libraries Used
 
-No Gaming/Physics Libraries/Frameworks used. All Custom Code and Custom Physics.
+Game froked from [Pappu Pakia](https://github.com/rishabhp/pappu-pakia)
 Only jQuery used for quick and few DOM manipulations.
 
 ## About
 
 Based on the compo's rules, the concepts
-that we tried to incorporate are fork, branch, push, pull, clone.
+that we tried to incorporate are fork, branch, push, pull, clone associated with a crypto theme.
 
 You are pappu in the game, a little character. You need to
 click the mouse or tap (touch screen) to levitate or else
@@ -39,13 +29,11 @@ will end the game. 3 types of pakias - sad (pull you),
 happy (push you), angry (kill you). Keep safe distance from
 them!
 
-There are some collectibles too! Coins for points (yellow for 50,
-pink for 100, red for 500, blue for 1000). Stars for invincibility
+There are some collectibles too! Coins for points (BTC for 50,
+LTC for 100, ETH for 500, XMR for 1000). Stars for invincibility
 for a short period. Berries spawning clones that'll destroy
 anything that comes in their way!
 
 Collisions are not super strict to make the gameplay a little less harder.
-
-No Libraries/Frameworks used. All Custom Code and Custom Physics.
 
 Hit Enter or Spacebar keys to (re)start the game.
