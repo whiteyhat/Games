@@ -1,35 +1,35 @@
-define(['jquery'], function($) {
-	
+define(['jquery'], function ($) {
+
 	var gameOptions = {
 		musicVolume: 1,
 		effectsVolume: 1,
 		casualMode: false
 	};
-	
+
 	var GameOptions = {
-		get: function(optionName, defaultValue) {
+		get: function (optionName, defaultValue) {
 			return gameOptions[optionName] == null ? defaultValue : gameOptions[optionName];
 		},
-		
-		set: function(optionName, value) {
+
+		set: function (optionName, value) {
 			gameOptions[optionName] = value;
-			if(typeof Storage != 'undefined' && localStorage) {
+			if (typeof Storage != 'undefined' && localStorage) {
 				localStorage.gameOptions = JSON.stringify(gameOptions);
 			}
 			return value;
 		},
-		
-		load: function() {
+
+		load: function () {
 			try {
 				var savedOptions = JSON.parse(localStorage.gameOptions);
-				if(savedOptions) {
+				if (savedOptions) {
 					$.extend(gameOptions, savedOptions);
 				}
-			} catch(e) {
+			} catch (e) {
 				// Nothing
 			}
 		}
 	};
-	
+
 	return GameOptions;
 });

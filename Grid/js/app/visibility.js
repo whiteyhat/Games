@@ -1,7 +1,7 @@
-define(['app/eventmanager'], function(E) {
+define(['app/eventmanager'], function (E) {
 
 	var hidden = null, visibilityChangeEvent = null;
-	if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support 
+	if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later support
 		hidden = "hidden";
 		visibilityChangeEvent = "visibilitychange";
 	} else if (typeof document.mozHidden !== "undefined") {
@@ -14,28 +14,28 @@ define(['app/eventmanager'], function(E) {
 		hidden = "webkitHidden";
 		visibilityChangeEvent = "webkitvisibilitychange";
 	}
-	
+
 	function visibilityChange(visibility) {
-		if(visibility === false || (visibility == null && 
-				document[hidden] && require('app/engine').isStarted())) {
+		if (visibility === false || (visibility == null &&
+			document[hidden] && require('app/engine').isStarted())) {
 			E.trigger('pause');
 		}
 	}
-	
-	if(hidden != null && window.addEventListener) {
+
+	if (hidden != null && window.addEventListener) {
 		// Use the Page Visibility API
-		document.addEventListener(visibilityChangeEvent, function() { visibilityChange(null); });
+		document.addEventListener(visibilityChangeEvent, function () { visibilityChange(null); });
 	} else {
 		// Use old fashioned onblur/onfocus events
-		window.onfocus = function() { visibilityChange(true); };
-		window.onblur = function() { visibilityChange(false); };
+		window.onfocus = function () { visibilityChange(true); };
+		window.onblur = function () { visibilityChange(false); };
 	}
-	
+
 	var Visibility = {
-		init: function() {
+		init: function () {
 			// Nothing to do!
 		},
-		isReady: function() {
+		isReady: function () {
 			return true;
 		}
 	};

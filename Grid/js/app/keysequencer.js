@@ -1,4 +1,4 @@
-define(['app/eventmanager'], function(EventManager) {
+define(['app/eventmanager'], function (EventManager) {
 
 	var TIME_WINDOW = 1000; // in millis
 	var SEQUENCE = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
@@ -6,18 +6,18 @@ define(['app/eventmanager'], function(EventManager) {
 
 	function checkSequence(e) {
 		e = e || window.event;
-		if(timeout) {
+		if (timeout) {
 			clearTimeout(timeout);
 			timeout = null;
 		}
 
-		if(e.keyCode == SEQUENCE[currentPosition]) {
+		if (e.keyCode == SEQUENCE[currentPosition]) {
 			currentPosition++;
-			if(currentPosition >= SEQUENCE.length) {
+			if (currentPosition >= SEQUENCE.length) {
 				currentPosition = 0;
 				EventManager.trigger('keySequenceComplete');
 			} else {
-				timeout = setTimeout(function() {
+				timeout = setTimeout(function () {
 					currentPosition = 0;
 					timeout = null;
 				}, TIME_WINDOW);
@@ -28,7 +28,7 @@ define(['app/eventmanager'], function(EventManager) {
 	}
 
 	var KeySequencer = {
-		init: function() {
+		init: function () {
 			window.onkeydown = checkSequence;
 			currentPosition = 0;
 		}

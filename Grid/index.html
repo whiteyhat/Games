@@ -1,75 +1,88 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		
-		<meta name="viewport" content="width=device-width">
-		<title>Greedy Grid</title>
-		<meta itemprop="description" name="description" property="og:description" content="Match. Build. Survive.">
-		<meta itemprop="image" property="og:image" content="img/badge.png" />
-		<meta itemprop="name" property="og:title" content="Greedy Grid" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<link rel="icon" href="icon.png">
-		<link rel="image_src" href="icon.png">
-		<link rel="apple-touch-icon"href="icon.png">
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<script type="text/javascript" data-main="js/app" src="js/lib/require.js"></script>
-		<style>
-			@viewport {
-				width: device-width;
-				max-zoom: 1;
-				orientation: portrait;
-				user-zoom: fixed;
-			}
-			@-ms-viewport {
-				width: device-width;
-				max-zoom: 1;
-				orientation: portrait;
-				user-zoom: fixed;
-			}
-			@-o-viewport {
-				width: device-width;
-				max-zoom: 1;
-				orientation: portrait;
-				user-zoom: fixed;
-			}
-		</style>
-	</head>
-	<body class="titleScreen">
-		<div id="test" nodeploy></div>
-		<div id="pauseIcon"></div>
-		<div id="loadingScreen">
-			<div class="saveSpinner">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
+
+<head>
+	<meta name="viewport" content="width=device-width">
+	<title>Grid</title>
+	<meta itemprop="description" name="description" property="og:description" content="Match. Build. Survive.">
+	<meta itemprop="image" property="og:image" content="img/badge.png" />
+	<meta itemprop="name" property="og:title" content="Greedy Grid" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="icon" href="img/icon.png">
+	<link rel="image_src" href="img/icon.png">
+	<link rel="apple-touch-icon" href="img/icon.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" data-main="js/app" src="js/lib/require.js"></script>
+	<style>
+		@viewport {
+			width: device-width;
+			max-zoom: 1;
+			orientation: portrait;
+			user-zoom: fixed;
+		}
+
+		@-ms-viewport {
+			width: device-width;
+			max-zoom: 1;
+			orientation: portrait;
+			user-zoom: fixed;
+		}
+
+		@-o-viewport {
+			width: device-width;
+			max-zoom: 1;
+			orientation: portrait;
+			user-zoom: fixed;
+		}
+	</style>
+</head>
+
+<body class="titleScreen">
+	<div id="score" style="border: 3px dotted white; border-radius: 3px; width: 15%; height: auto;">
+		<h3 style="color: white;">- TOP SCORES-</h3>
+		<ol>
+			<li id="score" style="font-family: 'Bungee Shade', cursive;color: white;"> Carlos - 16 pts</li>
+			<li id="score" style="font-family: 'Bungee Shade', cursive;color: white;"> Roque - 5 pts</li>
+			<li id="score" style="font-family: 'Bungee Shade', cursive;color: white;"> Lucas - 3 pts</li>
+		</ol>
+	</div>
+	<div id="test" nodeploy></div>
+	<div id="pauseIcon"></div>
+	<div id="loadingScreen">
+		<div class="saveSpinner">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
 		</div>
-		<div id="gameContainer"></div>
-		<div class="menuBar litBorder">
-			<div id="debug" style="position:absolute;top:5px;left:100px;" nodeploy></div>
-			<div class="saveSpinner">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			<a class="logo" onclick="require('app/eventmanager').trigger('click', ['logo']);" target="_blank" href="https://www.satoshis.games">
-				<span class="nightSprite" data-clickable='true'></span>
-			</a>
-			<span class="menuHeading"></span>
-			<div class="menuBtn litBorder">
-				<div class="nightSprite"></div>
-			</div>
+	</div>
+	<div id="gameContainer"></div>
+
+	<div class="menuBar litBorder">
+		<div id="debug" style="position:absolute;top:5px;left:100px;" nodeploy></div>
+		<div class="saveSpinner">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
 		</div>
-	</body>
+		<a class="logo" onclick="require('app/eventmanager').trigger('click', ['logo']);" target="_blank" href="https://www.satoshis.games">
+			<span class="nightSprite" data-clickable='true'></span>
+		</a>
+		<span class="menuHeading"></span>
+		<div class="menuBtn litBorder">
+			<div class="nightSprite"></div>
+		</div>
+	</div>
+</body>
+
 </html>

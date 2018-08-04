@@ -1,5 +1,5 @@
 define({
-	
+
 	ResourceType: {
 		Grain: {
 			char: 'g',
@@ -25,7 +25,7 @@ define({
 			char: 'w',
 			className: 'wood',
 			nightEffect: {
-				'default': 'shield'				
+				'default': 'shield'
 			},
 			multipliers: {
 				sawmill: 1,
@@ -118,34 +118,34 @@ define({
 			}
 		}
 	},
-	
+
 	BuildingCallbacks: {
-		'shack': function() {
+		'shack': function () {
 			var e = require('app/eventmanager');
 			e.trigger('resourceStoreChanged', [3, 3]);
 		},
-		
-		'house': function() {
+
+		'house': function () {
 			var e = require('app/eventmanager');
 			e.trigger('resourceStoreChanged', [4, 3]);
 		},
-		
-		'fort': function() {
+
+		'fort': function () {
 			var e = require('app/eventmanager');
 			e.trigger('resourceStoreChanged', [4, 4]);
 		},
-		
-		'castle': function() {
+
+		'castle': function () {
 			var e = require('app/eventmanager');
 			e.trigger('resourceStoreChanged', [5, 4]);
 		},
-		
-		'tower': function() {
+
+		'tower': function () {
 			var e = require('app/eventmanager');
 			e.trigger('enableMagic');
 		}
 	},
-	
+
 	BuildingType: {
 		Shack: {
 			className: 'shack',
@@ -157,7 +157,7 @@ define({
 			priority: 1,
 			isBase: true
 		},
-		
+
 		House: {
 			className: 'house',
 			spriteName: 'shack',
@@ -173,7 +173,7 @@ define({
 			priority: 1,
 			isBase: true
 		},
-		
+
 		Fort: {
 			className: 'fort',
 			spriteName: 'shack',
@@ -189,7 +189,7 @@ define({
 			priority: 1,
 			isBase: true
 		},
-		
+
 		Castle: {
 			className: 'castle',
 			spriteName: 'shack',
@@ -205,7 +205,7 @@ define({
 			priority: 1,
 			isBase: true
 		},
-		
+
 		BrickLayer: {
 			className: 'bricklayer',
 			spriteName: 'bricklayer',
@@ -217,7 +217,7 @@ define({
 			requiredLevel: 1,
 			priority: 1
 		},
-		
+
 		Bricklayer2: {
 			className: 'bricklayer2',
 			spriteName: 'bricklayer',
@@ -234,7 +234,7 @@ define({
 			defaultAnimation: 1,
 			priority: 4
 		},
-		
+
 		Bricklayer3: {
 			className: 'bricklayer3',
 			spriteName: 'bricklayer',
@@ -251,7 +251,7 @@ define({
 			defaultAnimation: 2,
 			priority: 6
 		},
-		
+
 		Bricklayer4: {
 			className: 'bricklayer4',
 			spriteName: 'bricklayer',
@@ -268,19 +268,19 @@ define({
 			defaultAnimation: 3,
 			priority: 9
 		},
-		
+
 		Weaver: {
 			className: 'weaver',
 			spriteName: 'weaver',
 			position: 150,
-			cost: { 
+			cost: {
 				stone: 5,
 				wood: 5
 			},
 			requiredLevel: 1,
 			priority: 2
 		},
-		
+
 		Weaver2: {
 			className: 'weaver2',
 			spriteName: 'weaver',
@@ -297,7 +297,7 @@ define({
 			defaultAnimation: 1,
 			priority: 4
 		},
-		
+
 		Weaver3: {
 			className: 'weaver3',
 			spriteName: 'weaver',
@@ -314,7 +314,7 @@ define({
 			defaultAnimation: 2,
 			priority: 6
 		},
-		
+
 		Weaver4: {
 			className: 'weaver4',
 			spriteName: 'weaver',
@@ -331,7 +331,7 @@ define({
 			defaultAnimation: 3,
 			priority: 9
 		},
-		
+
 		Blacksmith: {
 			className: 'blacksmith',
 			spriteName: 'blacksmith',
@@ -345,7 +345,7 @@ define({
 			tileLevel: 2,
 			priority: 3
 		},
-		
+
 		Blacksmith2: {
 			className: 'blacksmith2',
 			spriteName: 'blacksmith',
@@ -362,7 +362,7 @@ define({
 			defaultAnimation: 1,
 			priority: 5
 		},
-		
+
 		Blacksmith3: {
 			className: 'blacksmith3',
 			spriteName: 'blacksmith',
@@ -379,7 +379,7 @@ define({
 			defaultAnimation: 2,
 			priority: 6
 		},
-		
+
 		Blacksmith4: {
 			className: 'blacksmith4',
 			spriteName: 'blacksmith',
@@ -396,7 +396,7 @@ define({
 			defaultAnimation: 3,
 			priority: 7
 		},
-		
+
 		Blacksmith5: {
 			className: 'blacksmith5',
 			spriteName: 'blacksmith',
@@ -413,7 +413,7 @@ define({
 			defaultAnimation: 4,
 			priority: 8
 		},
-		
+
 		Blacksmith6: {
 			className: 'blacksmith6',
 			spriteName: 'blacksmith',
@@ -430,7 +430,7 @@ define({
 			defaultAnimation: 5,
 			priority: 9
 		},
-		
+
 		Blacksmith7: {
 			className: 'blacksmith7',
 			spriteName: 'blacksmith',
@@ -447,7 +447,7 @@ define({
 			defaultAnimation: 6,
 			priority: 10
 		},
-		
+
 		Blacksmith8: {
 			className: 'blacksmith8',
 			spriteName: 'blacksmith',
@@ -464,7 +464,7 @@ define({
 			defaultAnimation: 7,
 			priority: 11
 		},
-		
+
 		Sawmill: {
 			className: 'sawmill',
 			spriteName: 'sawmill',
@@ -478,7 +478,7 @@ define({
 			tileLevel: 2,
 			priority: 3
 		},
-		
+
 		Sawmill2: {
 			className: 'sawmill2',
 			spriteName: 'sawmill',
@@ -495,7 +495,7 @@ define({
 			defaultAnimation: 1,
 			priority: 5
 		},
-		
+
 		Sawmill3: {
 			className: 'sawmill3',
 			spriteName: 'sawmill',
@@ -512,7 +512,7 @@ define({
 			defaultAnimation: 2,
 			priority: 6
 		},
-		
+
 		Sawmill4: {
 			className: 'sawmill4',
 			spriteName: 'sawmill',
@@ -529,7 +529,7 @@ define({
 			defaultAnimation: 3,
 			priority: 7
 		},
-		
+
 		Sawmill5: {
 			className: 'sawmill5',
 			spriteName: 'sawmill',
@@ -546,7 +546,7 @@ define({
 			defaultAnimation: 4,
 			priority: 8
 		},
-		
+
 		Sawmill6: {
 			className: 'sawmill6',
 			spriteName: 'sawmill',
@@ -563,7 +563,7 @@ define({
 			defaultAnimation: 5,
 			priority: 9
 		},
-		
+
 		Sawmill7: {
 			className: 'sawmill7',
 			spriteName: 'sawmill',
@@ -580,7 +580,7 @@ define({
 			defaultAnimation: 6,
 			priority: 10
 		},
-		
+
 		Sawmill8: {
 			className: 'sawmill8',
 			spriteName: 'sawmill',
@@ -597,7 +597,7 @@ define({
 			defaultAnimation: 7,
 			priority: 11
 		},
-		
+
 		Tower: {
 			className: 'tower',
 			spriteName: 'tower',
@@ -605,15 +605,15 @@ define({
 			cost: {},
 			requiredLevel: 1,
 			priority: 1,
-			test: function(State) {
+			test: function (State) {
 				return State.gem >= 4;
 			}
 		}
 	},
-	
+
 	LootType: {
 		healthPotion: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager'),
 					S = require('app/gamestate');
 				E.trigger('healDude', [Math.floor(S.maxHealth() / 2)]);
@@ -621,39 +621,39 @@ define({
 			}
 		},
 		manaPotion: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager'),
 					S = require('app/gamestate');
 				E.trigger('gainMana', [Math.floor(S.maxMana() / 2)]);
 			}
 		},
 		bomb: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager');
 				E.trigger('damageAll', [20]);
 				E.trigger('bomb');
 			}
 		},
 		equipment: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager');
 				E.trigger('fillEquipment');
 			}
 		},
 		callDragon: {
 			large: true,
-			onUse: function() {
+			onUse: function () {
 				require('app/eventmanager').trigger('callDragon');
 			}
 		}
 	},
-	
+
 	lootPools: {
 		rare: ['bomb'],
 		uncommon: ['equipment'],
 		common: ['healthPotion']
 	},
-	
+
 	StateEffects: {
 		freezeTime: {
 			className: 'freezeTime',
@@ -666,32 +666,32 @@ define({
 		frozen: {
 			className: 'frozen',
 			duration: 8000,
-			start: function(entity) {
+			start: function (entity) {
 				entity.paused = true;
-				if(this._worldEffect == null) {
-					this._worldEffect = new (require('app/entity/worldeffect'))({effectClass: 'iceBlock', spriteName: 'dragoneffects'});
+				if (this._worldEffect == null) {
+					this._worldEffect = new (require('app/entity/worldeffect'))({ effectClass: 'iceBlock', spriteName: 'dragoneffects' });
 					this._worldEffect.p(entity.p());
 					require('app/eventmanager').trigger('newEntity', [this._worldEffect]);
 				}
 			},
-			end: function(entity) {
+			end: function (entity) {
 				entity.paused = false;
 				require('app/eventmanager').trigger('removeEntity', [this._worldEffect]);
 				this._worldEffect = null;
 			}
 		}
 	},
-	
+
 	Spells: {
 		resetBoard: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager');
 				E.trigger('refreshBoard');
 				E.trigger('refreshBoardSpell');
 			}
 		},
 		haste: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager'),
 					C = require('app/gamecontent');
 				E.trigger('newStateEffect', [C.StateEffects.haste]);
@@ -699,14 +699,14 @@ define({
 			}
 		},
 		phaseChange: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager');
 				E.trigger('phaseChange', [!require('app/engine').isNight()]);
 				E.trigger('phaseChangeSpell');
 			}
 		},
 		freezeTime: {
-			onUse: function() {
+			onUse: function () {
 				var E = require('app/eventmanager'),
 					C = require('app/gamecontent');
 				E.trigger('newStateEffect', [C.StateEffects.freezeTime]);
@@ -714,19 +714,19 @@ define({
 			}
 		}
 	},
-	
+
 	TileEffects: {
 		explosive: {
 			duration: 5,
-			onMatch: function(row, column) {
+			onMatch: function (row, column) {
 				// a'splode!
 				var E = require('app/eventmanager'),
 					B = require('app/gameboard');
 				var tileMods = [];
-				for(var r = -1; r < 2; r++) {
-					if(row + r < 0 || row + r >= B.options.rows) continue;
-					for(var c = -1; c < 2; c++) {
-						if(column + c < 0 || column + c >= B.options.columns) continue;
+				for (var r = -1; r < 2; r++) {
+					if (row + r < 0 || row + r >= B.options.rows) continue;
+					for (var c = -1; c < 2; c++) {
+						if (column + c < 0 || column + c >= B.options.columns) continue;
 						tileMods.push({
 							row: row + r,
 							column: column + c,
@@ -735,33 +735,33 @@ define({
 					}
 				}
 				E.trigger("hurtDude", [30]);
-				E.trigger("tileExplode", [{row: row, column: column}]);
-				
+				E.trigger("tileExplode", [{ row: row, column: column }]);
+
 				return tileMods;
 			}
 		}
 	},
-	
-	getResourceType: function(query) {
-		for(var c in this.ResourceType) {
-			if(query.length == 1 && query == this.ResourceType[c].char || 
-					query == this.ResourceType[c].className) {
+
+	getResourceType: function (query) {
+		for (var c in this.ResourceType) {
+			if (query.length == 1 && query == this.ResourceType[c].char ||
+				query == this.ResourceType[c].className) {
 				return this.ResourceType[c];
 			}
 		}
 		return null;
 	},
-	
-	getBuildingType: function(className) {
-		for(var c in this.BuildingType) {
-			if(className == this.BuildingType[c].className) {
+
+	getBuildingType: function (className) {
+		for (var c in this.BuildingType) {
+			if (className == this.BuildingType[c].className) {
 				return this.BuildingType[c];
 			}
 		}
 		return null;
 	},
-	
-	getEffectType: function(effectString) {
+
+	getEffectType: function (effectString) {
 		return this.TileEffects[effectString];
 	}
 });
