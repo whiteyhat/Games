@@ -19,6 +19,24 @@ body.night {
 	background-color: black;
 }
 
+.score div {
+	margin-left: -40%;
+	margin-top: 40%;
+	height: 100%;
+	position: relative;
+	display: block;
+	width: 30%;
+	
+  }
+  .row:nth-child(1) {
+	background: gold;
+  }
+  .row:nth-child(2) {
+	background: #c0c0c0;
+  }
+  .row:nth-child(3) {
+	background: #cd7f32;
+  }
 body.paused:before {
 	display: block;
 	content: ' ';
