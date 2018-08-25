@@ -19,23 +19,26 @@ body.night {
 	background-color: black;
 }
 
-.score div {
-	margin-left: -40%;
-	margin-top: 40%;
-	height: 100%;
-	position: relative;
+#score {
+	margin-top: 115%;
+	margin-left: 30%;
+	border: 2px dotted gray;
+	border-radius: 3px;
+	height: auto;
+	position: fixed;
 	display: block;
-	width: 30%;
-	
+	width: auto;
+	padding: 3%;
+
   }
   .row:nth-child(1) {
-	background: gold;
+	color: gold;
   }
   .row:nth-child(2) {
-	background: #c0c0c0;
+	color: #c0c0c0;
   }
   .row:nth-child(3) {
-	background: #cd7f32;
+	color: #cd7f32;
   }
 body.paused:before {
 	display: block;
@@ -397,7 +400,7 @@ body.paused:before {
 	width: 28px;
 	height: 28px;
 	display: inline-block;
-	background-image: url(https://grid.satoshis.games/img/icons.png);
+	background-image: url(https://satoshis.games/grid/img/icons.png);
 	margin-left: 5px;
 	cursor: pointer;
 }
@@ -478,7 +481,7 @@ body.paused:before {
 .menuBtn {
 	height: 40px;
 	width: 40px;
-	background: url(https://grid.satoshis.games/img/icons.png) 0 -362px no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) 0 -362px no-repeat;
 	border-radius: 4px;
 	position: absolute;
 	right: 3px;
@@ -494,7 +497,7 @@ body.paused:before {
 .menuBtn .nightSprite {
 	height: 40px;
 	width: 40px;
-	background: url(https://grid.satoshis.games/img/icons.png) 0px -402px no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) 0px -402px no-repeat;
 }
 
 .menuBar.open {
@@ -613,7 +616,7 @@ body.paused:before {
 	display: block;
 	height: 48px;
 	width: 48px;
-	background-image: url(https://grid.satoshis.games/img/icons.png);
+	background-image: url(https://satoshis.games/grid/img/icons.png);
 }
 
 .logo .nightSprite {
@@ -1209,7 +1212,7 @@ body.paused:before {
 
 .star {
 	position: absolute;
-	background: url(https://grid.satoshis.games/img/icons.png) no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) no-repeat;
 	width: 16px;
 	height: 16px;
 	top: 10px;
@@ -1613,7 +1616,7 @@ body.paused:before {
 	height: 30px;
 	top: 0px;
 	left: 0px;
-	background: url(https://grid.satoshis.games/img/icons.png) no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) no-repeat;
 	position: absolute;
 	transform: translate3d(0px, 110px, 0px);
 	-webkit-transform: translate3d(0px, 110px, 0px);
@@ -1860,7 +1863,7 @@ body.paused:before {
 }
 
 .fireball .projectileInner {
-	background: url(https://grid.satoshis.games/img/icons.png) 0 -175px transparent;
+	background: url(https://satoshis.games/grid/img/icons.png) 0 -175px transparent;
 	width: 16px;
 	height: 7px;
 }
@@ -1878,7 +1881,7 @@ body.paused:before {
 .worldEffect.fire {
 	width: 30px;
 	height: 44px;
-	background: url(https://grid.satoshis.games/img/icons.png) transparent no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) transparent no-repeat;
 }
 
 /** Status **/
@@ -1915,7 +1918,7 @@ body.paused:before {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: url(https://grid.satoshis.games/img/icons.png) 0 -279px no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) 0 -279px no-repeat;
 	z-index: 1;
 }
 
@@ -1935,7 +1938,7 @@ body.paused:before {
 .bigheart .bar {
 	position: absolute;
 	height: 100%;
-	background: url(https://grid.satoshis.games/img/icons.png) -60px -279px;
+	background: url(https://satoshis.games/grid/img/icons.png) -60px -279px;
 	transition: width 300ms linear;
 	-webkit-transition: width 300ms linear;
 	-ms-transition: width 300ms linear;
@@ -1945,7 +1948,7 @@ body.paused:before {
 
 .heart.full,
 .bigheart.full {
-	background: url(https://grid.satoshis.games/img/icons.png) -60px -279px;
+	background: url(https://satoshis.games/grid/img/icons.png) -60px -279px;
 }
 
 .shield {
@@ -1953,7 +1956,7 @@ body.paused:before {
 	top: -35px;
 	width: 30px;
 	height: 30px;
-	background: url(https://grid.satoshis.games/img/icons.png) no-repeat 0px -30px;
+	background: url(https://satoshis.games/grid/img/icons.png) no-repeat 0px -30px;
 	transition: opacity 300ms linear;
 	-webkit-transition: opacity 300ms linear;
 	-ms-transition: opacity 300ms linear;
@@ -1963,7 +1966,7 @@ body.paused:before {
 
 .shield > div {
 	height: 100%;
-	background: url(https://grid.satoshis.games/img/icons.png) 0 0 no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) 0 0 no-repeat;
 	transition: width 300ms linear;
 	-webkit-transition: width 300ms linear;
 	-ms-transition: width 300ms linear;
@@ -2038,7 +2041,7 @@ body.paused:before {
 .sword {
 	width: 30px;
 	height: 30px;
-	background: url(https://grid.satoshis.games/img/icons.png) no-repeat 0px -981px;
+	background: url(https://satoshis.games/grid/img/icons.png) no-repeat 0px -981px;
 	transition: opacity 300ms linear;
 	-webkit-transition: opacity 300ms linear;
 	-ms-transition: opacity 300ms linear;
@@ -2048,7 +2051,7 @@ body.paused:before {
 
 .sword > div {
 	height: 100%;
-	background: url(https://grid.satoshis.games/img/icons.png) no-repeat 0 -951px;
+	background: url(https://satoshis.games/grid/img/icons.png) no-repeat 0 -951px;
 	transition: width 300ms linear;
 	-webkit-transition: width 300ms linear;
 	-ms-transition: width 300ms linear;
@@ -2209,7 +2212,7 @@ body.paused:before {
 	bottom: 0px;
 	width: 26px;
 	height: 26px;
-	background-image: url(https://grid.satoshis.games/img/icons.png);
+	background-image: url(https://satoshis.games/grid/img/icons.png);
 }
 
 .button {
@@ -2287,7 +2290,7 @@ body.paused:before {
 	position: absolute;
 	width: 28px;
 	height: 28px;
-	background-image: url(https://grid.satoshis.games/img/icons.png);
+	background-image: url(https://satoshis.games/grid/img/icons.png);
 }
 
 .inventory .button div:nth-child(1) {
@@ -2332,7 +2335,7 @@ body.paused:before {
 /** Magic **/
 .gem {
 	position: absolute;
-	background: url(https://grid.satoshis.games/img/icons.png) no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) no-repeat;
 	width: 12px;
 	height: 24px;
 	top: 35px;
@@ -2559,7 +2562,7 @@ body.paused:before {
 
 .spell,
 .states > div {
-	background-image: url(https://grid.satoshis.games/img/icons.png);
+	background-image: url(https://satoshis.games/grid/img/icons.png);
 	background-repeat: no-repeat;
 }
 
@@ -2709,7 +2712,7 @@ body.paused:before {
 	right: 0px;
 	height: 64px;
 	padding-left: 42px;
-	background: url(https://grid.satoshis.games/img/icons.png) 0 -442px no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) 0 -442px no-repeat;
 	margin-bottom: 20px;
 }
 
@@ -2719,7 +2722,7 @@ body.paused:before {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	background: url(https://grid.satoshis.games/img/icons.png) 0 -506px no-repeat;
+	background: url(https://satoshis.games/grid/img/icons.png) 0 -506px no-repeat;
 }
 
 .effectsVolume.volumeSlider {
@@ -2803,7 +2806,7 @@ body.paused:before {
 	display: block;
 	width: 48px;
 	height: 48px;
-	background-image: url(https://grid.satoshis.games/img/icons.png);
+	background-image: url(https://satoshis.games/grid/img/icons.png);
 }
 
 .social .nightSprite {
@@ -2866,7 +2869,7 @@ body.paused:before {
 	display: block;
 	width: 48px;
 	height: 48px;
-	background-image: url(https://grid.satoshis.games/img/icons.png);
+	background-image: url(https://satoshis.games/grid/img/icons.png);
 }
 
 .donate .nightSprite {
@@ -3030,7 +3033,7 @@ body.paused:before {
 	position: absolute;
 	width: 16px;
 	height: 7px;
-	background: url(https://grid.satoshis.games/img/icons.png) 0 -175px transparent;
+	background: url(https://satoshis.games/grid/img/icons.png) 0 -175px transparent;
 	transition: transform 300ms linear;
 	-webkit-transition: -webkit-transform 300ms linear;
 	-moz-transition: -moz-transform 300ms linear;
