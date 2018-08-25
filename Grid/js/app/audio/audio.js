@@ -9,7 +9,7 @@ define(['app/eventmanager', 'app/audio/webaudioprovider', 'app/audio/htmlaudiopr
 	var playingMusic = false;
 	var longloadTimer = false;
 	var playingBossMusic = false;
-	var CDN_PATH = "https://grid.satoshis.games/";
+	var CDN_PATH = "https://satoshis.games/grid/";
 	
 	var sounds = {
 		DayMusic: {
