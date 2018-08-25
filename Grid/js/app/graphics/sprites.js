@@ -1,6 +1,6 @@
 define(function() {
 
-	var CDN_PATH = "https://grid.satoshis.games/";
+	var CDN_PATH = "https://satoshis.games/grid/";
 	var spriteinfo = {
 		// Buildings
 		blacksmith: ['buildings', 0],
