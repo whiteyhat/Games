@@ -1,5 +1,93 @@
-<script language="JavaScript" type="text/javascript">
-	<!--
-	document.write(unescape('%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%0A%3Chead%3E%0A%09%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%22%3E%0A%09%3Ctitle%3EGrid%3C/title%3E%0A%09%3Cmeta%20itemprop%3D%22description%22%20name%3D%22description%22%20property%3D%22og%3Adescription%22%20content%3D%22Match.%20Build.%20Survive.%22%3E%0A%09%3Cmeta%20itemprop%3D%22image%22%20property%3D%22og%3Aimage%22%20content%3D%22img/badge.png%22%20/%3E%0A%09%3Cmeta%20itemprop%3D%22name%22%20property%3D%22og%3Atitle%22%20content%3D%22Greedy%20Grid%22%20/%3E%0A%09%3Cmeta%20name%3D%22apple-mobile-web-app-capable%22%20content%3D%22yes%22%20/%3E%0A%09%3Cmeta%20name%3D%22mobile-web-app-capable%22%20content%3D%22yes%22%20/%3E%0A%09%3Clink%20rel%3D%22icon%22%20href%3D%22img/icon.png%22%3E%0A%09%3Clink%20rel%3D%22image_src%22%20href%3D%22img/icon.png%22%3E%0A%09%3Clink%20rel%3D%22apple-touch-icon%22%20href%3D%22img/icon.png%22%3E%0A%09%3Clink%20rel%3D%22stylesheet%22%20type%3D%22text/css%22%20href%3D%22css/main.css%22%20/%3E%0A%09%3Cscript%20type%3D%22text/javascript%22%20data-main%3D%22js/app%22%20src%3D%22js/lib/require.js%22%3E%3C/script%3E%0A%09%3Cstyle%3E%0A%09%09@viewport%20%7B%0A%09%09%09width%3A%20device-width%3B%0A%09%09%09max-zoom%3A%201%3B%0A%09%09%09orientation%3A%20portrait%3B%0A%09%09%09user-zoom%3A%20fixed%3B%0A%09%09%7D%0A%0A%09%09@-ms-viewport%20%7B%0A%09%09%09width%3A%20device-width%3B%0A%09%09%09max-zoom%3A%201%3B%0A%09%09%09orientation%3A%20portrait%3B%0A%09%09%09user-zoom%3A%20fixed%3B%0A%09%09%7D%0A%0A%09%09@-o-viewport%20%7B%0A%09%09%09width%3A%20device-width%3B%0A%09%09%09max-zoom%3A%201%3B%0A%09%09%09orientation%3A%20portrait%3B%0A%09%09%09user-zoom%3A%20fixed%3B%0A%09%09%7D%0A%09%3C/style%3E%0A%3C/head%3E%0A%0A%3Cbody%20class%3D%22titleScreen%22%3E%0A%09%3Cdiv%20id%3D%22score%22%20style%3D%22border%3A%203px%20dotted%20white%3B%20border-radius%3A%203px%3B%20width%3A%2015%25%3B%20height%3A%20auto%3B%22%3E%0A%09%09%3Ch3%20style%3D%22color%3A%20white%3B%22%3E-%20TOP%20SCORES-%3C/h3%3E%0A%09%09%3Col%3E%0A%09%09%09%3Cli%20id%3D%22score%22%20style%3D%22font-family%3A%20%27Bungee%20Shade%27%2C%20cursive%3Bcolor%3A%20white%3B%22%3E%20Carlos%20-%2016%20pts%3C/li%3E%0A%09%09%09%3Cli%20id%3D%22score%22%20style%3D%22font-family%3A%20%27Bungee%20Shade%27%2C%20cursive%3Bcolor%3A%20white%3B%22%3E%20Roque%20-%205%20pts%3C/li%3E%0A%09%09%09%3Cli%20id%3D%22score%22%20style%3D%22font-family%3A%20%27Bungee%20Shade%27%2C%20cursive%3Bcolor%3A%20white%3B%22%3E%20Lucas%20-%203%20pts%3C/li%3E%0A%09%09%3C/ol%3E%0A%09%3C/div%3E%0A%09%3Cdiv%20id%3D%22test%22%20nodeploy%3E%3C/div%3E%0A%09%3Cdiv%20id%3D%22pauseIcon%22%3E%3C/div%3E%0A%09%3Cdiv%20id%3D%22loadingScreen%22%3E%0A%09%09%3Cdiv%20class%3D%22saveSpinner%22%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%3C/div%3E%0A%09%3C/div%3E%0A%09%3Cdiv%20id%3D%22gameContainer%22%3E%3C/div%3E%0A%0A%09%3Cdiv%20class%3D%22menuBar%20litBorder%22%3E%0A%09%09%3Cdiv%20id%3D%22debug%22%20style%3D%22position%3Aabsolute%3Btop%3A5px%3Bleft%3A100px%3B%22%20nodeploy%3E%3C/div%3E%0A%09%09%3Cdiv%20class%3D%22saveSpinner%22%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%09%3Cdiv%3E%3C/div%3E%0A%09%09%3C/div%3E%0A%09%09%3Ca%20class%3D%22logo%22%20onclick%3D%22require%28%27app/eventmanager%27%29.trigger%28%27click%27%2C%20%5B%27logo%27%5D%29%3B%22%20target%3D%22_blank%22%20href%3D%22../index.html%22%3E%0A%09%09%09%3Cspan%20class%3D%22nightSprite%22%20data-clickable%3D%27true%27%3E%3C/span%3E%0A%09%09%3C/a%3E%0A%09%09%3Cspan%20class%3D%22menuHeading%22%3E%3C/span%3E%0A%09%09%3Cdiv%20class%3D%22menuBtn%20litBorder%22%3E%0A%09%09%09%3Cdiv%20class%3D%22nightSprite%22%3E%3C/div%3E%0A%09%09%3C/div%3E%0A%09%3C/div%3E%0A%3C/body%3E%0A%0A%3C/html%3E'));
-	//-->
-	</script>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width">
+	<title>Greedy Grid</title>
+	<meta itemprop="description" name="description" property="og:description" content="Match. Build. Survive.">
+	<meta itemprop="image" property="og:image" content="img/badge.png" />
+	<meta itemprop="name" property="og:title" content="Greedy Grid" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="icon" href="img/badge.png">
+	<link rel="image_src" href="img/badge.png">
+	<link rel="apple-touch-icon" href="img/badge.png">
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" data-main="js/app" src="js/lib/require.js"></script>
+	<style>
+		@viewport {
+			width: device-width;
+			max-zoom: 1;
+			orientation: portrait;
+			user-zoom: fixed;
+		}
+
+		@-ms-viewport {
+			width: device-width;
+			max-zoom: 1;
+			orientation: portrait;
+			user-zoom: fixed;
+		}
+
+		@-o-viewport {
+			width: device-width;
+			max-zoom: 1;
+			orientation: portrait;
+			user-zoom: fixed;
+		}
+	</style>
+</head>
+
+<body class="titleScreen">
+
+	<div id="test" nodeploy></div>
+	<div id="pauseIcon"></div>
+	<div id="loadingScreen">
+		<div class="saveSpinner">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div id="gameContainer">
+		
+</div>
+<div id="score">
+	<center>
+		<h3 style="color: gray;">- TOP SCORES-</h3>
+		<ol>
+			<li class="row" style="font-family: 'Bungee Shade', cursive;"> Carlos - 16 pts</li>
+			<li class="row" style="font-family: 'Bungee Shade', cursive;"> Roque - 5 pts</li>
+			<li class="row" style="font-family: 'Bungee Shade', cursive;"> Lucas - 3 pts</li>
+		</ol>
+	</center>
+	</div>
+	<div class="menuBar litBorder">
+		<div id="debug" style="position:absolute;top:5px;left:100px;" nodeploy></div>
+		<div class="saveSpinner">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+		<a class="logo" onclick="require('app/eventmanager').trigger('click', ['logo']);" target="_self" href="../index.html">
+			<span class="nightSprite" data-clickable='true'></span>
+		</a>
+		<span class="menuHeading"></span>
+		<div class="menuBtn litBorder">
+			<div class="nightSprite"></div>
+		</div>
+	</div>
+</body>
+
+</html>
