@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+    <title>Space Invasion</title>
+    <meta charset="utf-8">
+    <meta name="og:description" content="Play Space Invasion on top of Lightning Network ⚡">
+    <meta name="keywords" content="Satoshis games, Lightning Network, Space Invasion">
+    <meta name="og:image" content="/satoshis.games/icons/logosmall.png">
+    <meta name="og:url" content="https://satoshis.games/spaceinvasion/index.html">
+    <meta name="og:title" content="Space Invasion - Earn Bitcoin for Gaming">
+    <meta name="twitter:site" content="@satishisgames">
+    <meta property="og:site_name" content="Space Invasion">
+    <meta name="twitter:image:alt" content="Play Games built on top of Lightning Network ⚡">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+</head>
+
+<body>
+    <center>
+        <img src="icons/controls.png" alt=" ">
+    </center>
+    <canvas id="canvas" width="325" height="420" style="display: block; margin: 10px auto; border-radius: 5px;"></canvas>
+
+
+    <div style="display: flex; justify-content: center;">
+        <button onmousedown="moveLeft()" onmouseup="clearMove()" ontouchstart="moveLeft()" ontouchend="clearMove()" style="width: 90px; height: 60px"></button>
+        <button style="width: 90px; height: 60px" onclick="fireOn()">Fire</button>
+        <button onmousedown="moveRight()" onmouseup="clearMove()" ontouchstart="moveRight()" ontouchend="clearMove()" style="width: 90px; height: 60px"></button>
+    </div>
+    <br>
+    <a href="../index.html">
+        <center>
+            <img src="icons/home.png" alt=" " style="width: 60px; height: 60px;">
+        </center>
+    </a>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
