@@ -1,0 +1,11 @@
+#home{
+    width: 20%;
+    height: auto;
+    margin-top: -700px;
+    margin-left: 45px
+  }
+
+@media only screen and (max-width: 1080px) {
+    #home{
+    }
+}
