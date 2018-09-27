@@ -654,9 +654,14 @@ Mario.Character.prototype.Get1Up = function () {
     }
 };
 
+/**
+ * Function that exchanges the 500 satoshis for a new life.
+ * This needs to be remodelled to include LN service
+ */
+
 Mario.Character.prototype.GetCoin = function () {
     this.Coins++;
-    if (this.Coins === 100) {
+    if (this.Coins === 500) {
         this.Coins = 0;
         this.Get1Up();
     }
