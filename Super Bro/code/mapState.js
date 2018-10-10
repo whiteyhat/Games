@@ -654,7 +654,7 @@ Mario.MapState.prototype.GetY = function() {
 };
 
 Mario.MapState.prototype.CheckForChange = function(context) {
-    if (this.WorldNumber === 8) {
+    if (this.WorldNumber === 5) {
         context.ChangeState(new Mario.WinState());
     }
     if (this.EnterLevel) {
