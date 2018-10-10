@@ -19,7 +19,11 @@ Mario.WinState.prototype.Enter = function() {
     this.camera = new Enjine.Camera();
     
     this.font = Mario.SpriteCuts.CreateBlackFont();
-    this.font.Strings[0] = { String: "Thank you for saving me, Mario!", X: 36, Y: 160 };
+    this.font.Strings[0] = { String: "Thank you for saving me, take your satoshis!", X: 0, Y: 160 };
+
+    // create Input for the user to write their pre image from the invoice request the have to do
+
+    // ask Carlos RoldaN if you do not understand the architecture
     
     this.kissing = new Enjine.AnimatedSprite();
     this.kissing.Image = Enjine.Resources.Images["endScene"];
