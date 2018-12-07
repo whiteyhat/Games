@@ -1,6 +1,5 @@
 # Bcraft
-
-![Bcraftgif](https://img.itch.io/aW1hZ2UvNzUxNjEvMzQ4MTUxLmdpZg==/250x600/9A%2Bk5j.gif)
+![Bcraft](https://i.gyazo.com/41999b6ae92c112c14e4e977367b6eba.png)
 
 ## Intro
 You wake up on a deserted island, and you have to survive. Gather materials and build your tools. Explore the area and find a cave. Will you find a way to escape the island?
@@ -31,4 +30,4 @@ Bcraft is a crafting game made using Pico 8. The game is heavily inspired by Not
 ## Credits:
 On this open source game, forked from [PCraft](https://nusan.itch.io/pcraft), created by [Antoine Zanuttini](https://twitter.com/NuSan_fx).
 
-![Bcraft](https://i.gyazo.com/41999b6ae92c112c14e4e977367b6eba.png)
+![Bcraftgif](https://img.itch.io/aW1hZ2UvNzUxNjEvMzQ4MTUxLmdpZg==/250x600/9A%2Bk5j.gif)
