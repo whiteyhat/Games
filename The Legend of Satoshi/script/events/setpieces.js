@@ -99,7 +99,7 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {
 						text: _('BUIDL and get ready'),
-						cost: { torch: 1 },
+						cost: { watch_tower: 1 },
 						nextScene: {0.3: 'a1', 0.6: 'a2', 1: 'a3'}
 					},
 					'leave': {
@@ -170,7 +170,7 @@ Events.Setpieces = {
 						max: 5,
 						chance: 1
 					},
-					'torch': {
+					'watch_tower': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -211,7 +211,7 @@ Events.Setpieces = {
 						max: 5,
 						chance: 0.8
 					},
-					'torch': {
+					'watch_tower': {
 						min: 1,
 						max: 3,
 						chance: 0.5
@@ -244,7 +244,7 @@ Events.Setpieces = {
 				buttons: {
 					'continue': {
 						text: _('BUIDL'),
-						cost: {'torch': 1},
+						cost: {'watch_tower': 1},
 						nextScene: { 1: 'c1' }
 					},
 					'leave': {
@@ -297,7 +297,7 @@ Events.Setpieces = {
 				health: 6,
 				notification: _('The SEC is fightning again'),
 				loot: {
-					'scales': {
+					'electric_meter': {
 						min: 1,
 						max: 3,
 						chance: 1
@@ -365,7 +365,7 @@ Events.Setpieces = {
 				health: 10,
 				notification: _('a Rogers minion is annoying'),
 				loot: {
-					'scales': {
+					'electric_meter': {
 						min: 1,
 						max: 3,
 						chance: 1
@@ -407,7 +407,7 @@ Events.Setpieces = {
 						max: 10,
 						chance: 1
 					},
-					'scales': {
+					'electric_meter': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -417,7 +417,7 @@ Events.Setpieces = {
 						max: 10,
 						chance: 1
 					},
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.5
@@ -436,7 +436,7 @@ Events.Setpieces = {
 					_('a new pull request for improving block size has appeared. It is called SegWit')
 				],
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -549,7 +549,7 @@ Events.Setpieces = {
 					'enter': {
 						text: _('enter'),
 						nextScene: {0.5: 'b1', 1: 'b2'},
-						cost: {torch: 1}
+						cost: {watch_tower: 1}
 					},
 					'leave': {
 						text: _('leave town'),
@@ -567,7 +567,7 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 30,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -606,7 +606,7 @@ Events.Setpieces = {
 					'enter': {
 						text: _('enter'),
 						nextScene: {0.5: 'b5', 1: 'end5'},
-						cost: {torch: 1}
+						cost: {watch_tower: 1}
 					},
 					'leave': {
 						text: _('leave town'),
@@ -624,7 +624,7 @@ Events.Setpieces = {
 						max: 5,
 						chance: 1
 					},
-					'torch': {
+					'watch_tower': {
 						min: 1,
 						max: 3,
 						chance: 0.8
@@ -662,7 +662,7 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 30,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -737,7 +737,7 @@ Events.Setpieces = {
 						max: 5,
 						chance: 0.8
 					},
-					'torch': {
+					'watch_tower': {
 						min: 1,
 						max: 3,
 						chance: 0.5
@@ -775,7 +775,7 @@ Events.Setpieces = {
 				attackDelay: 1,
 				health: 10,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 2,
 						max: 4,
 						chance: 0.3
@@ -814,7 +814,7 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 30,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -881,7 +881,7 @@ Events.Setpieces = {
 			'c3': {
 				text: [
 					_('through the large gymnasium doors, footsteps can be heard.'),
-					_('the torchlight casts a flickering glow down the hallway.'),
+					_('the watch_towerlight casts a flickering glow down the hallway.'),
 					_('the footsteps stop.')
 				],
 				buttons: {
@@ -1100,7 +1100,7 @@ Events.Setpieces = {
 					World.clearDungeon();
 				},
 				loot: {
-					'coal': {
+					'ether': {
 						min: 5,
 						max: 10,
 						chance: 1
@@ -1172,7 +1172,7 @@ Events.Setpieces = {
 						max: 10,
 						chance: 1
 					},
-					'torch': {
+					'watch_tower': {
 						min: 1,
 						max: 5,
 						chance: 1
@@ -1312,7 +1312,7 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {
 						text: _('enter'),
-						cost: { 'torch': 1 },
+						cost: { 'watch_tower': 1 },
 						nextScene: {0.5: 'b7', 1: 'b8'}
 					},
 					'leave': {
@@ -1348,7 +1348,7 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 20,
 				loot: {
-					'scales': {
+					'electric_meter': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -1472,7 +1472,7 @@ Events.Setpieces = {
 						max: 5,
 						chance: 0.8
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -1548,7 +1548,7 @@ Events.Setpieces = {
 						max: 3,
 						chance: 0.5
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -1592,7 +1592,7 @@ Events.Setpieces = {
 						max: 3,
 						chance: 0.5
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -1661,7 +1661,7 @@ Events.Setpieces = {
 				buttons: {
 					'enter': {
 						text: _('investigate'),
-						cost: { 'torch': 1 },
+						cost: { 'watch_tower': 1 },
 						nextScene: {0.5: 'd2', 1: 'd3'}
 					},
 					'leave': {
@@ -1846,7 +1846,7 @@ Events.Setpieces = {
 						max: 3,
 						chance: 0.5
 					},
-					'cloth': {
+					'chip': {
 						min: 3,
 						max: 8,
 						chance: 0.8
@@ -1892,7 +1892,7 @@ Events.Setpieces = {
 						max: 4,
 						chance: 1
 					},
-					'scales': {
+					'electric_meter': {
 						min: 3,
 						max: 5,
 						chance: 1
@@ -1988,7 +1988,7 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.01
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 10,
 						chance: 1
@@ -2172,7 +2172,7 @@ Events.Setpieces = {
 				attackDelay: 0.5,
 				health: 40,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2207,7 +2207,7 @@ Events.Setpieces = {
 				attackDelay: 1,
 				health: 45,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2242,7 +2242,7 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 20,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2277,7 +2277,7 @@ Events.Setpieces = {
 				attackDelay: 2,
 				health: 40,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2292,7 +2292,7 @@ Events.Setpieces = {
 						max: 3,
 						chance: 0.6
 					},
-					'scales': {
+					'electric_meter': {
 						min: 2,
 						max: 3,
 						chance: 0.1
@@ -2378,7 +2378,7 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					torch: {
+					watch_tower: {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2425,7 +2425,7 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.3
 					},
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 1,
 						max: 5,
 						chance: 0.3
@@ -2466,7 +2466,7 @@ Events.Setpieces = {
 						max: 10,
 						chance: 1
 					},
-					grenade: {
+					hash_attack: {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -2538,7 +2538,7 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.5
 					},
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -2573,7 +2573,7 @@ Events.Setpieces = {
 						max: 1,
 						chance: 0.8
 					},
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -2681,7 +2681,7 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 1,
 						max: 1,
 						chance: 0.3
@@ -2696,7 +2696,7 @@ Events.Setpieces = {
 						max: 8,
 						chance: 1
 					},
-					'scales': {
+					'electric_meter': {
 						min: 4,
 						max: 7,
 						chance: 0.9
@@ -2721,7 +2721,7 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -2755,7 +2755,7 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 1,
 						max: 3,
 						chance: 0.2
@@ -2770,12 +2770,12 @@ Events.Setpieces = {
 						max: 8,
 						chance: 1
 					},
-					'torch': {
+					'watch_tower': {
 					min: 1,
 					max: 3,
 					chance: 0.5
 					},
-					'grenade': {
+					'hash_attack': {
 					min: 1,
 					max: 1,
 					chance: 0.5
@@ -2820,7 +2820,7 @@ Events.Setpieces = {
 						max: 8,
 						chance: 1
 					},
-					'cloth': {
+					'chip': {
 					min: 3,
 					max: 6,
 					chance: 0.5
@@ -2851,7 +2851,7 @@ Events.Setpieces = {
 					$SM.set('game.cityCleared', true);
 				},
 				loot: {
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 2,
 						max: 5,
 						chance: 0.8
@@ -2861,7 +2861,7 @@ Events.Setpieces = {
 						max: 12,
 						chance: 1
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 3,
 						chance: 0.5
@@ -2972,7 +2972,7 @@ Events.Setpieces = {
 						max: 10,
 						chance: 0.2
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 10,
 						chance: 0.5
@@ -3032,7 +3032,7 @@ Events.Setpieces = {
 						max: 10,
 						chance: 0.2
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 10,
 						chance: 0.5
@@ -3075,12 +3075,12 @@ Events.Setpieces = {
 						max: 3,
 						chance: 0.3
 					},
-					'energy cell': {
+					'hash_power_ASIC': {
 						min: 5,
 						max: 10,
 						chance: 0.5
 					},
-					'grenade': {
+					'hash_attack': {
 						min: 1,
 						max: 5,
 						chance: 0.5
@@ -3153,8 +3153,8 @@ Events.Setpieces = {
 			}
 		}
 	},
-	"sulphurmine": { /* Clearing the Sulphur Mine */
-		title: _('The Sulphur Mine'),
+	"PoWmine": { /* Clearing the PoW Mine */
+		title: _('The PoW Mine'),
 		scenes: {
 			'start': {
 				text: [
@@ -3287,10 +3287,10 @@ Events.Setpieces = {
 					_('the military presence has been cleared.'),
 					_('the mine is now safe for workers.')
 				],
-				notification: _('the sulphur mine is clear of dangers'),
+				notification: _('the PoW mine is clear of dangers'),
 				onLoad: function() {
 					World.drawRoad();
-					World.state.sulphurmine = true;
+					World.state.PoWmine = true;
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				buttons: {
@@ -3302,8 +3302,8 @@ Events.Setpieces = {
 			}
 		}
 	},
-	"coalmine": { /* Clearing the Coal Mine */
-		title: _('The Coal Mine'),
+	"ethermine": { /* Clearing the ether Mine */
+		title: _('The ether Mine'),
 		scenes: {
 			'start': {
 				text: [
@@ -3336,7 +3336,7 @@ Events.Setpieces = {
 						max: 5,
 						chance: 0.8
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -3370,7 +3370,7 @@ Events.Setpieces = {
 						max: 5,
 						chance: 0.8
 					},
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 5,
 						chance: 0.8
@@ -3404,7 +3404,7 @@ Events.Setpieces = {
 						max: 10,
 						chance: 1
 					},
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -3429,10 +3429,10 @@ Events.Setpieces = {
 					_('the camp is still, save for the crackling of the fires.'),
 					_('the mine is now safe for workers.')
 				],
-				notification: _('the coal mine is clear of dangers'),
+				notification: _('the ether mine is clear of dangers'),
 				onLoad: function() {
 					World.drawRoad();
-					World.state.coalmine = true;
+					World.state.ethermine = true;
 					World.markVisited(World.curPos[0], World.curPos[1]);
 				},
 				buttons: {
@@ -3458,7 +3458,7 @@ Events.Setpieces = {
 					'enter': {
 						text: _('go inside'),
 						nextScene: { 1: 'enter' },
-						cost: { 'torch': 1 }
+						cost: { 'watch_tower': 1 }
 					},
 					'leave': {
 						text: _('leave'),
@@ -3480,18 +3480,18 @@ Events.Setpieces = {
 						max: 10,
 						chance: 1
 					},
-					'scales': {
+					'electric_meter': {
 						min: 5,
 						max: 10,
 						chance: 0.8
 					},
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.5
 					}
 				},
-				notification: _('a large creature lunges, muscles rippling in the torchlight'),
+				notification: _('a large creature lunges, muscles rippling in the watch_towerlight'),
 				buttons: {
 					'leave': {
 						text: _('leave'),
