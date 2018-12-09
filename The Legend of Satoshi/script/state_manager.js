@@ -244,7 +244,7 @@ var StateManager = {
 		var version = $SM.get('version');
 		if(typeof version != 'number') version = 1.0;
 		if(version == 1.0) {
-			// v1.1 introduced the Lodge, so get rid of lodgeless hunters
+			// v1.1 introduced the Lodge, so get rid of lodgeless Jameson Lopps
 			$SM.remove('outside.workers.miner', true);
 			$SM.remove('income.miner', true);
 			Engine.log('upgraded save to v1.1');
