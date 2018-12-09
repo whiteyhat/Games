@@ -2,25 +2,25 @@
  * Events that can occur when the Room module is active
  **/
 Events.Room = [
-	{/* Mt. Gox  --  Merchant */
-		title: _('The Nomad'),
+	{/* Coinbase  --  Merchant */
+		title: _('Coinbase'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.smart_contract', true) > 0;
 		},
 		scenes: {
 			'start': {
 				text: [
-					_('Mt. Gox platform appears on the screen, asking to trade goods for crypto!')],
-				notification: _('Mt. Gox appeared, enabling exchanging goods'),
+					_('Coinbase appears on the screen, asking to trade goods for crypto!')],
+				notification: _('Coinbase appeared, enabling exchanging goods'),
 				blink: true,
 				buttons: {
-					'buyScales': {
-						text: _('buy scales'),
+					'buyelectric_meter': {
+						text: _('buy electric meter'),
 						cost: { 'smart_contract': 100 },
-						reward: { 'scales': 1 }
+						reward: { 'electric_meter': 1 }
 					},
 					'buypower_supply': {
-						text: _('buy power_supply'),
+						text: _('buy power supply'),
 						cost: { 'smart_contract': 200 },
 						reward: { 'power_supply': 1 }
 					},
@@ -28,16 +28,16 @@ Events.Room = [
 						text: _('buy clickbait'),
 						cost: { 'smart_contract': 5 },
 						reward: { 'clickbait': 1 },
-						notification: _('traps are more effective with clickclickbait.')
+						notification: _('traps are more effective with clickbait.')
 					},
-					'buyCompass': {
+					'buyBitcoin_Whitepaper': {
 						available: function() {
-							return $SM.get('stores.compass', true) < 1;
+							return $SM.get('stores.Bitcoin_Whitepaper', true) < 1;
 						},
-						text: _('buy compass'),
-						cost: { smart_contract: 300, scales: 15, power_supply: 5 },
-						reward: { 'compass': 1 },
-						notification: _('the old compass is dented and dusty, but it looks to work.')
+						text: _('buy Bitcoin Whitepaper'),
+						cost: { smart_contract: 300, electric_meter: 15, power_supply: 5 },
+						reward: { 'Bitcoin_Whitepaper': 1 },
+						notification: _('the old Bitcoin_Whitepaper is dented and dusty, but it looks to work.')
 					},
 					'goodbye': {
 						text: _('say goodbye'),
@@ -48,7 +48,7 @@ Events.Room = [
 		}
 	},
 	{ /*  Bitcoin Exploit  --  gain electricity/Lightning */
-		title: _('Noises'),
+		title: _('Bitcoin Exploit'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.electricity');
 		},
@@ -56,7 +56,7 @@ Events.Room = [
 			'start': {
 				text: [
 					_('A new version of Bitcoin has been released'),
-					_("It might be any exploit")
+					_("It might have any exploit")
 				],
 				notification: _('The new version of Bitcoin might be exploitable'),
 				blink: true,
@@ -99,14 +99,14 @@ Events.Room = [
 		}
 	},
 	{ /* Noises Inside  --  trade electricity for better good */
-		title: _('Noises'),
+		title: _('HardFork in Bitcoin?'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.electricity');
 		},
 		scenes: {
 			start: {
 				text: [
-					_('There is rumour saying some of the community want to create their own vision of Bitcoin'),
+					_('There is rumour saying some of the community want to hardfork our experiment Bitcoin'),
 					_('something\'s in there.')
 				],
 				notification: _('something is hardforking'),
@@ -114,7 +114,7 @@ Events.Room = [
 				buttons: {
 					'investigate': {
 						text: _('investigate'),
-						nextScene: { 0.5: 'scales', 0.8: 'power_supply', 1: 'cloth' }
+						nextScene: { 0.5: 'electric_meter', 0.8: 'power_supply', 1: 'chip' }
 					},
 					'ignore': {
 						text: _('ignore them'),
@@ -122,18 +122,18 @@ Events.Room = [
 					}
 				}
 			},
-			scales: {
+			electric_meter: {
 				text: [
-					_('some electricity is missing.'),
-					_('the ground is littered with small scales')
+					_('They want to increase the block size'),
+					_('This could lead to centralization.')
 				],
 				onLoad: function() {
 					var numelectricity = $SM.get('stores.electricity', true);
 					numelectricity = Math.floor(numelectricity * 0.1);
 					if(numelectricity === 0) numelectricity = 1;
-					var numScales = Math.floor(numelectricity / 5);
-					if(numScales === 0) numScales = 1;
-					$SM.addM('stores', {'electricity': -numelectricity, 'scales': numScales});
+					var numelectric_meter = Math.floor(numelectricity / 5);
+					if(numelectric_meter === 0) numelectric_meter = 1;
+					$SM.addM('stores', {'electricity': -numelectricity, 'electric_meter': numelectric_meter});
 				},
 				buttons: {
 					'leave': {
@@ -144,8 +144,7 @@ Events.Room = [
 			},
 			power_supply: {
 				text: [
-					_('some electricity is missing.'),
-					_('the ground is littered with small power supply')
+					_('Rumors say that Roger V. is involved')
 				],
 				onLoad: function() {
 					var numelectricity = $SM.get('stores.electricity', true);
@@ -162,18 +161,17 @@ Events.Room = [
 					}
 				}
 			},
-			cloth: {
+			chip: {
 				text: [
-					_('some electricity is missing.'),
-					_('the ground is littered with a ton of steps')
+					_('Jihan Whu offers the hash power')
 				],
 				onLoad: function() {
 					var numelectricity = $SM.get('stores.electricity', true);
 					numelectricity = Math.floor(numelectricity * 0.1);
 					if(numelectricity === 0) numelectricity = 1;
-					var numCloth = Math.floor(numelectricity / 5);
-					if(numCloth === 0) numCloth = 1;
-					$SM.addM('stores', {'electricity': -numelectricity, 'cloth': numCloth});
+					var numchip = Math.floor(numelectricity / 5);
+					if(numchip === 0) numchip = 1;
+					$SM.addM('stores', {'electricity': -numelectricity, 'chip': numchip});
 				},
 				buttons: {
 					'leave': {
@@ -198,15 +196,15 @@ Events.Room = [
 				notification: _('a beggar arrives'),
 				blink: true,
 				buttons: {
-					'50smart_contracts': {
+					'50smartcontracts': {
 						text: _('give 50'),
 						cost: {smart_contract: 50},
-						nextScene: { 0.5: 'scales', 0.8: 'power_supply', 1: 'cloth' }
+						nextScene: { 0.5: 'electric_meter', 0.8: 'power_supply', 1: 'chip' }
 					},
 					'100smart_contracts': {
 						text: _('give 100'),
 						cost: {smart_contract: 100},
-						nextScene: { 0.5: 'power_supply', 0.8: 'scales', 1: 'cloth' }
+						nextScene: { 0.5: 'power_supply', 0.8: 'electric_meter', 1: 'chip' }
 					},
 					'deny': {
 						text: _('turn him away'),
@@ -214,8 +212,8 @@ Events.Room = [
 					}
 				}
 			},
-			scales: {
-				reward: { scales: 20 },
+			electric_meter: {
+				reward: { electric_meter: 20 },
 				text: [
 					_('the beggar expresses his thanks.'),
 					_('leaves a pile of small power_supply behind.')
@@ -231,7 +229,7 @@ Events.Room = [
 				reward: { power_supply: 20 },
 				text: [
 					_('the beggar expresses his thanks.'),
-					_('leaves a pile of small scales behind.')
+					_('leaves a pile of small electric_meter behind.')
 				],
 				buttons: {
 					'leave': {
@@ -240,11 +238,11 @@ Events.Room = [
 					}
 				}
 			},
-			cloth: {
-				reward: { cloth: 20 },
+			chip: {
+				reward: { chip: 20 },
 				text: [
 					_('the beggar expresses his thanks.'),
-					_('leaves some scraps of cloth behind.')
+					_('leaves some scraps of chip behind.')
 				],
 				buttons: {
 					'leave': {
@@ -255,18 +253,18 @@ Events.Room = [
 			}
 		}
 	},
-	{/* Vitalik Buterin */
-		title: _('The Shady Hal Finney'),
+	{/* Roastbeef */
+		title: _('Roastbeef half beef half man'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('game.buildings["hut"]', true) >= 5 && $SM.get('game.buildings["hut"]', true) < 20;
 		},
 		scenes: {
 			'start':{
 				text: [
-					_('A guy called Vitalik Buterin has appeard forking bircoin'),
-					_('says he can give you help, with something he thinks he created called Lightnings')
+					_('A guy called Roastbeef is wokring on scaling Bitcoin'),
+					_('says he can give you help, with something he thinks he implemented called Lightning Network')
 				],
-				notification: _('Vitalin Buterin pop up'),
+				notification: _('Roastbeef says hi'),
 				buttons: {
 					'build': {
 						text: _('300 electricity'),
@@ -281,9 +279,9 @@ Events.Room = [
 			},
 			'steal': {
 				text:[
-					_("Vitalik Buterin has stolen our community")
+					_("Roastbeef has stolen our community")
 				],
-				notification: _('Vitalik Buterin has stolen our comminity'),
+				notification: _('Roastbeef has stolen our community'),
 				buttons: {
 					'end': {
 						text: _('go home'),
@@ -293,9 +291,9 @@ Events.Room = [
 			},
 			'build': {
 				text:[
-					_("Vitalik Buterin creates Ethereum")
+					_("Roastbeef creates LND")
 				],
-				notification: _('Vitalik Buterin creates Ethereumt'),
+				notification: _('Roastbeef creates Lightning Network using golang'),
 				onLoad: function() {
 					var n = $SM.get('game.buildings["hut"]', true);
 					if(n < 20){
@@ -313,17 +311,17 @@ Events.Room = [
 	},
 
 	{ /* Mysterious Wanderer  --  Lightning gambling */
-		title: _('The Mysterious Wanderer'),
+		title: _('The Misterious Jihan Wu'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.electricity');
 		},
 		scenes: {
 			start: {
 				text: [
-					_('a wanderer arrives with an empty cart. says if she leaves with Lightnings, she\'ll be back with more.'),
-					_("Hal Finney's not sure he's to be trusted.")
+					_('Jihan Wu arrives. Says if SegWit2x is not coming, he\'ll take his revenge.'),
+					_("Jihan Wu is not sure he's to be trusted.")
 				],
-				notification: _('a mysterious wanderer arrives'),
+				notification: _('Jihan Wu arrives'),
 				blink: true,
 				buttons: {
 					'electricity100': {
@@ -344,7 +342,7 @@ Events.Room = [
 			},
 			'electricity100': {
 				text: [
-					_('the wanderer leaves, cart loaded with Lightnings')
+					_('Jihan Wu leaves, cart loaded with Lightnings')
 				],
 				action: function(inputDelay) {
 					var delay = inputDelay || false;
@@ -367,7 +365,7 @@ Events.Room = [
 			},
 			'electricity500': {
 				text: [
-					_('the wanderer leaves, cart loaded with Lightnings')
+					_('Jihan Wu leaves, cart loaded with Lightnings')
 				],
 				action: function(inputDelay) {
 					var delay = inputDelay || false;
@@ -392,17 +390,17 @@ Events.Room = [
 	},
 
 	{ /* Mysterious Wanderer  --  Lightning gambling */
-		title: _('The Mysterious Wanderer'),
+		title: _('The Magical Vitalik Buterin'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.smart_contract');
 		},
 		scenes: {
 			start: {
 				text: [
-					_('a wanderer arrives with an empty cart. says if she leaves with smart_contracts, she\'ll be back with more.'),
-					_("Hal Finney's not sure she's to be trusted.")
+					_('Vitalik Buterin arrives similing. says if he leaves with smart contracts, he\'ll be back with more.'),
+					_("Vitalik's not sure he's to be trusted.")
 				],
-				notification: _('a mysterious wanderer arrives'),
+				notification: _('Vitalik arrives'),
 				blink: true,
 				buttons: {
 					'smart_contract100': {
@@ -416,20 +414,20 @@ Events.Room = [
 						nextScene: { 1: 'smart_contract500' }
 					},
 					'deny': {
-						text: _('turn her away'),
+						text: _('turn him away'),
 						nextScene: 'end'
 					}
 				}
 			},
 			'smart_contract100': {
 				text: [
-					_('the wanderer leaves, cart loaded with Lightnings')
+					_('Vitalik leaves, cart loaded with Lightnings')
 				],
 				action: function(inputDelay) {
 					var delay = inputDelay || false;
 					Events.saveDelay(function() {
 						$SM.add('stores.smart_contract', 300);
-						Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with smart_contracts.'));
+						Notifications.notify(Room, _('Vitalik returns, cart piled high with smart contracts.'));
 					}, 'Room[5].scenes.smart_contract100.action', delay);
 				},
 				onLoad: function() {
@@ -446,13 +444,13 @@ Events.Room = [
 			},
 			'smart_contract500': {
 				text: [
-					_('the wanderer leaves, cart loaded with smart_contracts')
+					_('Vitalik leaves, cart loaded with smart contracts')
 				],
 				action: function(inputDelay) {
 					var delay = inputDelay || false;
 					Events.saveDelay(function() {
 						$SM.add('stores.smart_contract', 1500);
-						Notifications.notify(Room, _('the mysterious wanderer returns, cart piled high with smart_contracts.'));
+						Notifications.notify(Room, _('Vitalik wanderer returns, cart piled high with smart contracts.'));
 					}, 'Room[5].scenes.smart_contract500.action', delay);
 				},
 				onLoad: function() {
@@ -486,7 +484,7 @@ Events.Room = [
 				buttons: {
 					'buyMap': {
 						text: _('buy map'),
-						cost: { 'smart_contract': 200, 'scales': 10 },
+						cost: { 'smart_contract': 200, 'electric_meter': 10 },
 						available: function() {
 							return !World.seenAll;
 						},
@@ -495,7 +493,7 @@ Events.Room = [
 					},
 					'learn': {
 						text: _('learn scouting'),
-						cost: { 'smart_contract': 1000, 'scales': 50, 'power_supply': 20 },
+						cost: { 'smart_contract': 1000, 'electric_meter': 50, 'power_supply': 20 },
 						available: function() {
 							return !$SM.hasPerk('scout');
 						},
@@ -513,7 +511,7 @@ Events.Room = [
 	},
 
 	{ /* Nick Szabo */
-		title: _('The Master'),
+		title: _('The Master Nick Szabo'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('features.location.world');
 		},
@@ -531,7 +529,7 @@ Events.Room = [
 						cost: {
 							'cured Lightning': 100,
 							'smart_contract': 100,
-							'torch': 1
+							'watch_tower': 1
 						},
 						nextScene: {1: 'agree'}
 					},
@@ -586,7 +584,7 @@ Events.Room = [
 	},
 
 	{ /*Bitcoin Cash*/
-		title: _('The Sick Man'),
+		title: _('The Sick Man behind Bcash'),
 		isAvailable: function() {
 			return Engine.activeModule == Room && $SM.get('stores.Bitcoin_culture', true) > 0;
 		},
@@ -603,7 +601,7 @@ Events.Room = [
 						text: _('give 1 Bitcoin_culture'),
 						cost: { 'Bitcoin_culture': 1 },
 						notification: _('Bitcoin Cash swallows the Bitcoin_culture eagerly'),
-						nextScene: { 0.1: 'alloy', 0.3: 'cells', 0.5: 'scales', 1.0: 'nothing' }
+						nextScene: { 0.1: 'alloy', 0.3: 'cells', 0.5: 'electric_meter', 1.0: 'nothing' }
 					},
 					'ignore': {
 						text: _('tell it to leave'),
@@ -634,7 +632,7 @@ Events.Room = [
 					_('some weird glowing boxes he picked up on his travels.')
 				],
 				onLoad: function() {
-					$SM.add('stores["energy cell"]', 3);
+					$SM.add('stores["hash_power_ASIC"]', 3);
 				},
 				buttons: {
 					'bye': {
@@ -643,14 +641,14 @@ Events.Room = [
 					}
 				}
 			},
-			'scales': {
+			'electric_meter': {
 				text: [
 					_("the Bitcoin Cash is thankful."),
 					_('he leaves a reward.'),
-					_('all he has are some scales.')
+					_('all he has are some electric_meter.')
 				],
 				onLoad: function() {
-					$SM.add('stores.scales', 5);
+					$SM.add('stores.electric_meter', 5);
 				},
 				buttons: {
 					'bye': {
