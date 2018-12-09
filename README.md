@@ -3,7 +3,7 @@ Set of games developed by Satoshis Games
 
 ### Super Bro
 ###### Super Mario based game
-[![Super Bro](https://satoshis.games/icons/superbrogame.gif)](https://github.com/Satoshis-Games/Games/tree/master/Super%20Bro)
+[![Super Bro](https://satoshis.games/icons/smario.png)](https://github.com/Satoshis-Games/Games/tree/master/Super%20Bro)
 
 ### Bcraft
 ###### Minecraft lite based game
@@ -11,7 +11,7 @@ Set of games developed by Satoshis Games
 
 ### Flappy Crypto
 ###### Flappy Bird based game
-[![Flappy crypto](https://satoshis.games/icons/flappygame.gif)](https://github.com/Satoshis-Games/Games/tree/master/Flappy%20Crypto)
+[![Flappy crypto](https://satoshis.games/icons/flappy.png)](https://github.com/Satoshis-Games/Games/tree/master/Flappy%20Crypto)
 
 ### The Legend of Satoshi
 ###### A dark room based game
