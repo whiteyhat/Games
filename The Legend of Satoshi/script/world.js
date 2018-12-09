@@ -5,8 +5,8 @@ var World = {
 	TILE: {
 		VILLAGE: 'A',
 		IRON_MINE: 'I',
-		COAL_MINE: 'C',
-		SULPHUR_MINE: 'S',
+		ether_MINE: 'C',
+		PoW_MINE: 'S',
 		FOREST: ';',
 		FIELD: ',',
 		BARRENS: '.',
@@ -84,14 +84,14 @@ var World = {
 			type: 'ranged',
 			damage: 8,
 			cooldown: 1,
-			cost: { 'energy cell': 1 }
+			cost: { 'hash_power_ASIC': 1 }
 		},
-		'grenade': {
+		'hash_attack': {
 			verb: _('lob'),
 			type: 'ranged',
 			damage: 15,
 			cooldown: 5,
-			cost: { 'grenade': 1 }
+			cost: { 'hash_attack': 1 }
 		},
 		'bolas': {
 			verb: _('tangle'),
@@ -118,8 +118,8 @@ var World = {
 		// Setpiece definitions
 		World.LANDMARKS[World.TILE.OUTPOST] = { num: 0, minRadius: 0, maxRadius: 0, scene: 'outpost', label: _('An&nbsp;Outpost') };
 		World.LANDMARKS[World.TILE.IRON_MINE] = { num: 1, minRadius: 5, maxRadius: 5, scene: 'ironmine', label:  _('Iron&nbsp;Mine') };
-		World.LANDMARKS[World.TILE.COAL_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'coalmine', label:  _('Coal&nbsp;Mine') };
-		World.LANDMARKS[World.TILE.SULPHUR_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'sulphurmine', label:  _('Sulphur&nbsp;Mine') };
+		World.LANDMARKS[World.TILE.ether_MINE] = { num: 1, minRadius: 10, maxRadius: 10, scene: 'ethermine', label:  _('ether&nbsp;Mine') };
+		World.LANDMARKS[World.TILE.PoW_MINE] = { num: 1, minRadius: 20, maxRadius: 20, scene: 'PoWmine', label:  _('PoW&nbsp;Mine') };
 		World.LANDMARKS[World.TILE.HOUSE] = { num: 10, minRadius: 0, maxRadius: World.RADIUS * 1.5, scene: 'house', label:  _('An&nbsp;Old&nbsp;House') };
 		World.LANDMARKS[World.TILE.CAVE] = { num: 5, minRadius: 3, maxRadius: 10, scene: 'cave', label:  _('A&nbsp;Damp&nbsp;Cave') };
 		World.LANDMARKS[World.TILE.TOWN] = { num: 10, minRadius: 10, maxRadius: 20, scene: 'town', label:  _('An&nbsp;Abandoned&nbsp;Town') };
@@ -156,11 +156,11 @@ var World = {
 
 		Engine.updateOuterSlider();
 
-		// Map the ship and show compass tooltip
+		// Map the ship and show Bitcoin_Whitepaper tooltip
 		World.ship = World.mapSearch(World.TILE.SHIP,$SM.get('game.world.map'),1);
-		World.dir = World.compassDir(World.ship[0]);
-		// compass tooltip text
-		Room.compassTooltip(World.dir);
+		World.dir = World.Bitcoin_WhitepaperDir(World.ship[0]);
+		// Bitcoin_Whitepaper tooltip text
+		Room.Bitcoin_WhitepaperTooltip(World.dir);
 
 		// Check if everything has been seen
 		World.testMap();
@@ -709,7 +709,7 @@ var World = {
 				if(map[i][j].charAt(0) === target){
 					// search result is stored as an object;
 					// items are listed as they appear in the map, tl-br
-					// each item has relative coordinates and a compass-type direction
+					// each item has relative coordinates and a Bitcoin_Whitepaper-type direction
 					targets[index] = {
 						x : i - World.RADIUS,
 						y : j - World.RADIUS,
@@ -725,7 +725,7 @@ var World = {
 		return targets;
 	},
 
-	compassDir: function(pos){
+	Bitcoin_WhitepaperDir: function(pos){
 		var dir = '';
 		var horz = pos.x < 0 ? 'west' : 'east';
 		var vert = pos.y < 0 ? 'north' : 'south';
@@ -906,17 +906,17 @@ var World = {
 		$SM.setM('game.world', World.state);
 		World.testMap();
 
-		if(World.state.sulphurmine && $SM.get('game.buildings["sulphur mine"]', true) === 0) {
-			$SM.add('game.buildings["sulphur mine"]', 1);
-			Engine.event('progress', 'sulphur mine');
+		if(World.state.PoWmine && $SM.get('game.buildings["PoW mine"]', true) === 0) {
+			$SM.add('game.buildings["PoW mine"]', 1);
+			Engine.event('progress', 'PoW mine');
 		}
 		if(World.state.ironmine && $SM.get('game.buildings["iron mine"]', true) === 0) {
 			$SM.add('game.buildings["iron mine"]', 1);
 			Engine.event('progress', 'iron mine');
 		}
-		if(World.state.coalmine && $SM.get('game.buildings["coal mine"]', true) === 0) {
-			$SM.add('game.buildings["coal mine"]', 1);
-			Engine.event('progress', 'coal mine');
+		if(World.state.ethermine && $SM.get('game.buildings["ether mine"]', true) === 0) {
+			$SM.add('game.buildings["ether mine"]', 1);
+			Engine.event('progress', 'ether mine');
 		}
 		if(World.state.ship && !$SM.get('features.location.spaceShip')) {
 			Ship.init();
@@ -942,7 +942,7 @@ var World = {
 	},
 
 	leaveItAtHome: function(thing) {
-		 return thing != 'Lighting node' && thing != 'has_power' && thing != 'energy cell'  && thing != 'charm' && thing != 'Bitcoin_culture' &&
+		 return thing != 'Lighting node' && thing != 'has_power' && thing != 'hash_power_ASIC'  && thing != 'charm' && thing != 'Bitcoin_culture' &&
 		 typeof World.Weapons[thing] == 'undefined' && typeof Room.Craftables[thing] == 'undefined';
 	},
 
