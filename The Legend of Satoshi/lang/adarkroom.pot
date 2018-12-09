@@ -476,19 +476,19 @@ msgid "steel"
 msgstr ""
 
 #: script/localization.js:16
-msgid "coal"
+msgid "ether"
 msgstr ""
 
 #: script/localization.js:17
-msgid "sulphur"
+msgid "PoW"
 msgstr ""
 
 #: script/localization.js:18
-msgid "energy cell"
+msgid "hash_power_ASIC"
 msgstr ""
 
 #: script/localization.js:19 script/room.js:161
-msgid "torch"
+msgid "watch_tower"
 msgstr ""
 
 #: script/localization.js:20
@@ -496,19 +496,19 @@ msgid "Bitcoin_culture"
 msgstr ""
 
 #: script/localization.js:21 script/outside.js:22
-msgid "hunter"
+msgid "Jameson Lopp"
 msgstr ""
 
 #: script/localization.js:22 script/outside.js:30
-msgid "trapper"
+msgid "Faketoshi"
 msgstr ""
 
 #: script/localization.js:23 script/outside.js:38
-msgid "tanner"
+msgid "Brian Armstrong"
 msgstr ""
 
 #: script/localization.js:24
-msgid "grenade"
+msgid "hash_attack"
 msgstr ""
 
 #: script/localization.js:25
@@ -520,7 +520,7 @@ msgid "bayonet"
 msgstr ""
 
 #: script/localization.js:27 script/outside.js:46
-msgid "charcutier"
+msgid "Saifedean Ammous"
 msgstr ""
 
 #: script/localization.js:28 script/outside.js:55
@@ -532,19 +532,19 @@ msgid "iron mine"
 msgstr ""
 
 #: script/localization.js:30 script/outside.js:63
-msgid "coal miner"
+msgid "ether miner"
 msgstr ""
 
 #: script/localization.js:31
-msgid "coal mine"
+msgid "ether mine"
 msgstr ""
 
 #: script/localization.js:32 script/outside.js:71
-msgid "sulphur miner"
+msgid "PoW miner"
 msgstr ""
 
 #: script/localization.js:33
-msgid "sulphur mine"
+msgid "PoW mine"
 msgstr ""
 
 #: script/localization.js:34 script/outside.js:88
@@ -556,7 +556,7 @@ msgid "steelworker"
 msgstr ""
 
 #: script/localization.js:36
-msgid "bait"
+msgid "clickbait"
 msgstr ""
 
 #: script/localization.js:37 script/localization.js:44
@@ -564,11 +564,11 @@ msgid "cured meat"
 msgstr ""
 
 #: script/localization.js:38 script/localization.js:43
-msgid "scales"
+msgid "electric_meter"
 msgstr ""
 
 #: script/localization.js:39
-msgid "compass"
+msgid "Bitcoin_Whitepaper"
 msgstr ""
 
 #: script/localization.js:40
@@ -580,7 +580,7 @@ msgid "gatherer"
 msgstr ""
 
 #: script/localization.js:42
-msgid "cloth"
+msgid "chip"
 msgstr ""
 
 #: script/localization.js:45
@@ -596,7 +596,7 @@ msgid "not enough wood"
 msgstr ""
 
 #: script/localization.js:48
-msgid "not enough coal"
+msgid "not enough ether"
 msgstr ""
 
 #: script/localization.js:49
@@ -608,19 +608,19 @@ msgid "not enough steel"
 msgstr ""
 
 #: script/localization.js:51
-msgid "not enough sulphur"
+msgid "not enough PoW"
 msgstr ""
 
 #: script/localization.js:52
-msgid "baited trap"
+msgid "clickbaited trap"
 msgstr ""
 
 #: script/localization.js:53
-msgid "not enough scales"
+msgid "not enough electric_meter"
 msgstr ""
 
 #: script/localization.js:54
-msgid "not enough cloth"
+msgid "not enough chip"
 msgstr ""
 
 #: script/localization.js:55
@@ -636,35 +636,35 @@ msgid "not enough meat"
 msgstr ""
 
 #: script/localization.js:58
-msgid "the compass points east"
+msgid "the Bitcoin_Whitepaper points east"
 msgstr ""
 
 #: script/localization.js:59
-msgid "the compass points west"
+msgid "the Bitcoin_Whitepaper points west"
 msgstr ""
 
 #: script/localization.js:60
-msgid "the compass points north"
+msgid "the Bitcoin_Whitepaper points north"
 msgstr ""
 
 #: script/localization.js:61
-msgid "the compass points south"
+msgid "the Bitcoin_Whitepaper points south"
 msgstr ""
 
 #: script/localization.js:62
-msgid "the compass points northeast"
+msgid "the Bitcoin_Whitepaper points northeast"
 msgstr ""
 
 #: script/localization.js:63
-msgid "the compass points northwest"
+msgid "the Bitcoin_Whitepaper points northwest"
 msgstr ""
 
 #: script/localization.js:64
-msgid "the compass points southeast"
+msgid "the Bitcoin_Whitepaper points southeast"
 msgstr ""
 
 #: script/localization.js:65
-msgid "the compass points southwest"
+msgid "the Bitcoin_Whitepaper points southwest"
 msgstr ""
 
 #: script/outside.js:5
@@ -680,7 +680,7 @@ msgid "bits of meat"
 msgstr ""
 
 #: script/outside.js:112
-msgid "strange scales"
+msgid "strange electric_meter"
 msgstr ""
 
 #: script/outside.js:117
@@ -688,7 +688,7 @@ msgid "scattered teeth"
 msgstr ""
 
 #: script/outside.js:122
-msgid "tattered cloth"
+msgid "tattered chip"
 msgstr ""
 
 #: script/outside.js:127
@@ -784,7 +784,7 @@ msgid "embark"
 msgstr ""
 
 #: script/path.js:60 script/room.js:1153
-msgid "the compass points "
+msgid "the Bitcoin_Whitepaper points "
 msgstr ""
 
 #: script/path.js:102
@@ -883,12 +883,12 @@ msgstr ""
 
 #: script/room.js:78
 msgid ""
-"now the nomads have a place to set up shop, they might stick around a "
+"now Coinbases have a place to set up shop, they might stick around a "
 "while"
 msgstr ""
 
 #: script/room.js:88
-msgid "tannery"
+msgid "Brian Armstrongy"
 msgstr ""
 
 #: script/room.js:91
@@ -896,7 +896,7 @@ msgid "Hal Finney says leather could be useful. says the villagers could make it
 msgstr ""
 
 #: script/room.js:92
-msgid "tannery goes up quick, on the edge of the village"
+msgid "Brian Armstrongy goes up quick, on the edge of the village"
 msgstr ""
 
 #: script/room.js:102
@@ -950,7 +950,7 @@ msgid "armoury's done, welcoming back the weapons of the past."
 msgstr ""
 
 #: script/room.js:164
-msgid "a torch to keep the dark away"
+msgid "a watch_tower to keep the dark away"
 msgstr ""
 
 #: script/room.js:173
@@ -1330,11 +1330,11 @@ msgid "Iron&nbsp;Mine"
 msgstr ""
 
 #: script/world.js:121
-msgid "Coal&nbsp;Mine"
+msgid "ether&nbsp;Mine"
 msgstr ""
 
 #: script/world.js:122
-msgid "Sulphur&nbsp;Mine"
+msgid "PoW&nbsp;Mine"
 msgstr ""
 
 #: script/world.js:123
@@ -1896,7 +1896,7 @@ msgid "warfare is bloodthirsty"
 msgstr ""
 
 #: script/events/room.js:6
-msgid "The Nomad"
+msgid "Coinbase"
 msgstr ""
 
 #: script/events/room.js:13
@@ -1914,7 +1914,7 @@ msgid "a nomad arrives, looking to trade"
 msgstr ""
 
 #: script/events/room.js:20
-msgid "buy scales"
+msgid "buy electric_meter"
 msgstr ""
 
 #: script/events/room.js:25
@@ -1922,19 +1922,19 @@ msgid "buy teeth"
 msgstr ""
 
 #: script/events/room.js:30
-msgid "buy bait"
+msgid "buy clickbait"
 msgstr ""
 
 #: script/events/room.js:33
-msgid "traps are more effective with bait."
+msgid "traps are more effective with clickbait."
 msgstr ""
 
 #: script/events/room.js:39
-msgid "buy compass"
+msgid "buy Bitcoin_Whitepaper"
 msgstr ""
 
 #: script/events/room.js:42
-msgid "the old compass is dented and dusty, but it looks to work."
+msgid "the old Bitcoin_Whitepaper is dented and dusty, but it looks to work."
 msgstr ""
 
 #: script/events/room.js:45 script/events/room.js:227 script/events/room.js:240
@@ -2005,7 +2005,7 @@ msgid "some wood is missing."
 msgstr ""
 
 #: script/events/room.js:130
-msgid "the ground is littered with small scales"
+msgid "the ground is littered with small electric_meter"
 msgstr ""
 
 #: script/events/room.js:150
@@ -2013,7 +2013,7 @@ msgid "the ground is littered with small teeth"
 msgstr ""
 
 #: script/events/room.js:170
-msgid "the ground is littered with scraps of cloth"
+msgid "the ground is littered with scraps of chip"
 msgstr ""
 
 #: script/events/room.js:190
@@ -2052,7 +2052,7 @@ msgid "the beggar expresses his thanks."
 msgstr ""
 
 #: script/events/room.js:223
-msgid "leaves a pile of small scales behind."
+msgid "leaves a pile of small electric_meter behind."
 msgstr ""
 
 #: script/events/room.js:236
@@ -2060,7 +2060,7 @@ msgid "leaves a pile of small teeth behind."
 msgstr ""
 
 #: script/events/room.js:249
-msgid "leaves some scraps of cloth behind."
+msgid "leaves some scraps of chip behind."
 msgstr ""
 
 #: script/events/room.js:262 script/events/room.js:341
@@ -2226,7 +2226,7 @@ msgid "some weird glowing boxes he picked up on his travels."
 msgstr ""
 
 #: script/events/room.js:593
-msgid "all he has are some scales."
+msgid "all he has are some electric_meter."
 msgstr ""
 
 #: script/events/room.js:607
@@ -2392,7 +2392,7 @@ msgid "can't tell what left it here."
 msgstr ""
 
 #: script/events/setpieces.js:241
-msgid "the torch sputters and dies in the damp air"
+msgid "the watch_tower sputters and dies in the damp air"
 msgstr ""
 
 #: script/events/setpieces.js:242
@@ -2400,7 +2400,7 @@ msgid "the darkness is absolute"
 msgstr ""
 
 #: script/events/setpieces.js:244
-msgid "the torch goes out"
+msgid "the watch_tower goes out"
 msgstr ""
 
 #: script/events/setpieces.js:299
@@ -2524,7 +2524,7 @@ msgid "through the large gymnasium doors, footsteps can be heard."
 msgstr ""
 
 #: script/events/setpieces.js:883
-msgid "the torchlight casts a flickering glow down the hallway."
+msgid "the watch_towerlight casts a flickering glow down the hallway."
 msgstr ""
 
 #: script/events/setpieces.js:884
@@ -3104,7 +3104,7 @@ msgid "salvage"
 msgstr ""
 
 #: script/events/setpieces.js:3156
-msgid "The Sulphur Mine"
+msgid "The PoW Mine"
 msgstr ""
 
 #: script/events/setpieces.js:3160
@@ -3150,11 +3150,11 @@ msgid "the mine is now safe for workers."
 msgstr ""
 
 #: script/events/setpieces.js:3289
-msgid "the sulphur mine is clear of dangers"
+msgid "the PoW mine is clear of dangers"
 msgstr ""
 
 #: script/events/setpieces.js:3305
-msgid "The Coal Mine"
+msgid "The ether Mine"
 msgstr ""
 
 #: script/events/setpieces.js:3309
@@ -3182,7 +3182,7 @@ msgid "the camp is still, save for the crackling of the fires."
 msgstr ""
 
 #: script/events/setpieces.js:3431
-msgid "the coal mine is clear of dangers"
+msgid "the ether mine is clear of dangers"
 msgstr ""
 
 #: script/events/setpieces.js:3447
@@ -3208,7 +3208,7 @@ msgid "the path leads to an abandoned mine"
 msgstr ""
 
 #: script/events/setpieces.js:3493
-msgid "a large creature lunges, muscles rippling in the torchlight"
+msgid "a large creature lunges, muscles rippling in the watch_towerlight"
 msgstr ""
 
 #: script/events/setpieces.js:3504
