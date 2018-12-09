@@ -34,16 +34,16 @@ var Outside = {
 				'clickbait': 1
 			}
 		},
-		'tanner': {
-			name: _('tanner'),
+		'Brian Armstrong': {
+			name: _('Brian Armstrong'),
 			delay: 10,
 			stores: {
 				'graphicard': -5,
 				'mining_rig': 1
 			}
 		},
-		'charcutier': {
-			name: _('charcutier'),
+		'Saifedean Ammous': {
+			name: _('Saifedean Ammous'),
 			delay: 10,
 			stores: {
 				'Lightning': -5,
@@ -59,20 +59,20 @@ var Outside = {
 				'iron': 1
 			}
 		},
-		'coal miner': {
-			name: _('coal miner'),
+		'ether miner': {
+			name: _('ether miner'),
 			delay: 10,
 			stores: {
 				'Lighting node': -1,
-				'coal': 1
+				'ether': 1
 			}
 		},
-		'sulphur miner': {
-			name: _('sulphur miner'),
+		'PoW miner': {
+			name: _('PoW miner'),
 			delay: 10,
 			stores: {
 				'Lighting node': -1,
-				'sulphur': 1
+				'PoW': 1
 			}
 		},
 		'steelworker': {
@@ -80,7 +80,7 @@ var Outside = {
 			delay: 10,
 			stores: {
 				'iron': -1,
-				'coal': -1,
+				'ether': -1,
 				'steel': 1
 			}
 		},
@@ -89,7 +89,7 @@ var Outside = {
 			delay: 10,
 			stores: {
 				'steel': -1,
-				'sulphur': -1,
+				'PoW': -1,
 				'has_power': 1
 			}
 		}
@@ -108,18 +108,18 @@ var Outside = {
 		},
 		{
 			rollUnder: 0.85,
-			name: 'scales',
-			message: _('strange scales')
+			name: 'electric meter',
+			message: _('strange electric meter')
 		},
 		{
 			rollUnder: 0.93,
-			name: 'power_supply',
-			message: _('scattered power_supply')
+			name: 'power supply',
+			message: _('scattered power supply')
 		},
 		{
 			rollUnder: 0.995,
-			name: 'cloth',
-			message: _('tattered cloth')
+			name: 'chip',
+			message: _('tattered chip')
 		},
 		{
 			rollUnder: 1.0,
@@ -185,17 +185,17 @@ var Outside = {
 			var num = Math.floor(Math.random()*(space/2) + space/2);
 			if(num === 0) num = 1;
 			if(num == 1) {
-				Notifications.notify(null, _('a stranger arrives in the night'));
+				Notifications.notify(null, _('Jameson Lopp has arrived to help us.'));
 			} else if(num < 5) {
-				Notifications.notify(null, _('a weathered family takes up in one of the huts.'));
+				Notifications.notify(null, _('A few cryptographers has joined us, we are growing fast.'));
 			} else if(num < 10) {
-				Notifications.notify(null, _('a small group arrives, all dust and bones.'));
+				Notifications.notify(null, _('Blockstream arrives, all ready to contribute.'));
 			} else if(num < 30) {
-				Notifications.notify(null, _('a convoy lurches in, equal parts worry and hope.'));
+				Notifications.notify(null, _('Coindesk is here to make Bitcoin mass adoption.'));
 			} else {
-				Notifications.notify(null, _("the town's booming. word does get around."));
+				Notifications.notify(null, _("the bitcoin community is booming. word does get around."));
 			}
-			Engine.log('population increased by ' + num);
+			Engine.log('users increased by ' + num);
 			$SM.add('game.population', num);
 		}
 		Outside.schedulePopIncrease();
@@ -254,7 +254,7 @@ var Outside = {
 	
 	schedulePopIncrease: function() {
 		var nextIncrease = Math.floor(Math.random()*(Outside._POP_DELAY[1] - Outside._POP_DELAY[0])) + Outside._POP_DELAY[0];
-		Engine.log('next population increase scheduled in ' + nextIncrease + ' minutes');
+		Engine.log('more users coming in ' + nextIncrease + ' minutes');
 		Outside._popTimeout = Engine.setTimeout(Outside.increasePopulation, nextIncrease * 60 * 1000);
 	},
 	
@@ -440,7 +440,7 @@ var Outside = {
 				var traps = numTraps - numclickbait;
 				traps = traps < 0 ? 0 : traps;
 				Outside.updateVillageRow(k, traps, village);
-				Outside.updateVillageRow('clickbaited trap', numclickbait > numTraps ? numTraps : numclickbait, village);
+				Outside.updateVillageRow('clickbait trap', numclickbait > numTraps ? numTraps : numclickbait, village);
 			} else {
 				if(Outside.checkWorker(k)) {
 					Outside.updateWorkersView();
@@ -449,7 +449,7 @@ var Outside = {
 			}
 		}
 		/// TRANSLATORS : pop is short for population.
-		population.text(_('pop ') + $SM.get('game.population') + '/' + this.getMaxPopulation());
+		population.text(_('users ') + $SM.get('game.population') + '/' + this.getMaxPopulation());
 		
 		var hasPeeps;
 		if($SM.get('game.buildings["hut"]', true) === 0) {
@@ -479,11 +479,11 @@ var Outside = {
 	checkWorker: function(name) {
 		var jobMap = {
 			'lodge': ['miner', 'hacker'],
-			'tannery': ['tanner'],
-			'smokehouse': ['charcutier'],
+			'Brian Armstrongy': ['Brian Armstrong'],
+			'smokehouse': ['Saifedean Ammous'],
 			'iron mine': ['iron miner'],
-			'coal mine': ['coal miner'],
-			'sulphur mine': ['sulphur miner'],
+			'ether mine': ['ether miner'],
+			'PoW mine': ['PoW miner'],
 			'steelworks': ['steelworker'],
 			'armoury' : ['armourer']
 		};
