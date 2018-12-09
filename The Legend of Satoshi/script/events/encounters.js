@@ -56,7 +56,7 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 6,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 3,
 						chance: 0.8
@@ -93,7 +93,7 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 4,
 				loot: {
-					'scales': {
+					'electric_meter': {
 						min: 1,
 						max: 3,
 						chance: 0.8
@@ -130,7 +130,7 @@ Events.Encounters = [
 				attackDelay: 1,
 				health: 20,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 1,
 						max: 1,
 						chance: 0.2
@@ -209,7 +209,7 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 30,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -251,7 +251,7 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 20,
 				loot: {
-					'scales': {
+					'electric_meter': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -327,7 +327,7 @@ Events.Encounters = [
 				attackDelay: 2,
 				health: 50,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.8
@@ -370,7 +370,7 @@ Events.Encounters = [
 				health: 30,
 				ranged: true,
 				loot: {
-					'cloth': {
+					'chip': {
 						min: 5,
 						max: 10,
 						chance: 0.8
