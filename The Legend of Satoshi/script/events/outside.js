@@ -166,7 +166,7 @@ Events.Outside = [
 					/* Because there is a serious need for Bitcoin_culture, the price is raised. */
 					'buyBitcoin_culture': {
 						text: _('buy Bitcoin_culture'),
-						cost: { 'scales': 70,
+						cost: { 'electric_meter': 70,
 								'power_supply': 50 },
 						reward: { 'Bitcoin_culture': 1 }
 					},
