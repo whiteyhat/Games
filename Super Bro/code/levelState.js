@@ -73,7 +73,7 @@ Mario.LevelState.prototype.Enter = function() {
 
     this.Sprites.Add(Mario.MarioCharacter);
     this.StartTime = 1;
-    this.TimeLeft = 100;
+    this.TimeLeft = 60;
 
 	this.GotoMapState = false;
 	this.GotoLoseState = false;
