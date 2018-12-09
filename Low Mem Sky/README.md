@@ -9,26 +9,20 @@ You awake to find yourself on an alien planet, with the desire to achieve one th
 ### On Foot:
 
 **ARROWS** = Walk around
-* Z = Unmapped
+* Z = Run (hodl)
 * X = Collect Item / Take-off (when close enough)
-In Ship:
+* Enter = Quick menu
 
+### On space flight:
 **LEFT / RIGHT** = Rotate
-* UP / DOWN = Increase/Decrease Thrust
-* Z = Toggle Galactic Map
-* X = Land (when close to planet)
+**Down** = Open Galactic Map
+* Z = Engage Pulse Engine boost (Hold)
+* X = Land / Dock (when close to planet / trading station)
 
 
 ## Features:
 * Around 180,383,121,450 unique star systems.
 * Each with up to 8 procedurally-generated planets.
-  
-### Planned Features:
-
-* Mining resources
-* Shooting weapons
-* Animal species + Sentinels
-* "Functional" Space Stations - for trading
 
 ## Background:
 This game is ispired by No Man Sky by [Hello Games](http://www.hellogames.org/)
@@ -41,9 +35,3 @@ This game is ispired by No Man Sky by [Hello Games](http://www.hellogames.org/)
 * Music:
   * [Chris Donnelly](https://twitter.com/gruber_music)
     * http://www.grubermusic.com/
-   
-Additional code snippets that I used/adapted:
-
-* [PICO-8](https://www.lexaloffle.com/bbs/?tid=31201) port of Open Simplex by Felice Enellen
-* [Rotate Sprite snippet](https://www.lexaloffle.com/bbs/?pid=52525#p52541) + Marching Squares by Frederic Souchu
-* [Pico World](https://www.lexaloffle.com/bbs/?tid=3140) by Gamax92
