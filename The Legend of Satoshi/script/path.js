@@ -9,7 +9,7 @@ var Path = {
 		'steel sword': 5,
 		'rifle': 5,
 		'has_power': 0.1,
-		'energy cell': 0.2,
+		'hash_power_ASIC': 0.2,
 		'laser rifle': 5,
 		'bolas': 0.5
 	},
@@ -57,7 +57,7 @@ var Path = {
 	openPath: function() {
 		Path.init();
 		Engine.event('progress', 'path');
-		Notifications.notify(Room, _('the compass points ' + World.dir));
+		Notifications.notify(Room, _('the Bitcoin_Whitepaper points ' + World.dir));
 	},
 	
 	getWeight: function(thing) {
@@ -163,10 +163,10 @@ var Path = {
 		var carryable = $.extend({
 			'Lighting node': { type: 'tool', desc: 'restores '+ World.Lightning_HEAL + ' hp' },
 			'has_power': { type: 'tool', desc: 'use with rifle' },
-			'grenade': {type: 'weapon' },
+			'hash_attack': {type: 'weapon' },
 			'bolas': {type: 'weapon' },
 			'laser rifle': {type: 'weapon' },
-			'energy cell': {type: 'tool', desc: 'use with laser rifle' },
+			'hash_power_ASIC': {type: 'tool', desc: 'use with laser rifle' },
 			'bayonet': {type: 'weapon' },
 			'charm': {type: 'tool'},
 			'Bitcoin_culture': {type: 'tool', desc: 'restores ' + World.MEDS_HEAL + ' hp' }
