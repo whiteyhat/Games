@@ -44,8 +44,8 @@ var Room = {
 			name: _('rig'),
 			button: null,
 			maximum: 20,
-			availableMsg: _("builder says there are more engineers. says they'll work, too."),
-			buildMsg: _('builder puts up a rig.'),
+			availableMsg: _("Hall Finney says there are more engineers. says they'll work, too."),
+			buildMsg: _('Hal Finney puts up a rig.'),
 			maxMsg: _('no more space for rigs.'),
 			type: 'building',
 			cost: function() {
@@ -88,7 +88,7 @@ var Room = {
 			name: _('mining farm'),
 			button: null,
 			maximum: 1,
-			availableMsg: _("builder says mining rig could be useful. says the engineers could make it."),
+			availableMsg: _("Hal Finney says mining rig could be useful. says the engineers could make it."),
 			buildMsg: _('mining farm goes up quick, on the edge of the town'),
 			type: 'building',
 			cost: function() {
@@ -102,8 +102,8 @@ var Room = {
 			name: _('Eclair'),
 			button: null,
 			maximum: 1,
-			availableMsg: _("should cure the Lightning, or it'll spoil. builder says she can fix something up."),
-			buildMsg: _('builder finishes the Eclair. she looks tired.'),
+			availableMsg: _("should cure the Lightning, or it'll spoil. Roastbeef says she can fix something up."),
+			buildMsg: _('ACINC has finished the Eclair wallet. It looks reckless.'),
 			type: 'building',
 			cost: function() {
 				return {
@@ -116,8 +116,8 @@ var Room = {
 			name: _('workshop'),
 			button: null,
 			maximum: 1,
-			availableMsg: _("builder says she could make finer things, if she had the tools"),
-			buildMsg: _("workshop's finally ready. builder's excited to get to it"),
+			availableMsg: _("Hal Finney says she could make finer things, if she had the tools"),
+			buildMsg: _("workshop's finally ready. Hal Finney is excited to get to it"),
 			type: 'building',
 			cost: function() {
 				return {
@@ -131,14 +131,14 @@ var Room = {
 			name: _('steelworks'),
 			button: null,
 			maximum: 1,
-			availableMsg: _("builder says the workers could make steel, given the tools"),
+			availableMsg: _("Hal Finney says the workers could make steel, given the tools"),
 			buildMsg: _("shadow falls over the factory as the steelworks fires up"),
 			type: 'building',
 			cost: function() {
 				return {
 					'electricity': 1500,
 					'iron mining frame': 100,
-					'coal': 100
+					'ether': 100
 				};
 			}
 		},
@@ -146,26 +146,26 @@ var Room = {
 			name: _('mining pool'),
 			button: null,
 			maximum: 1,
-			availableMsg: _("builder says it'd be useful to have a steady source of hash power"),
+			availableMsg: _("Hal Finney says it'd be useful to have a steady source of hash power"),
 			buildMsg: _("mining pool is done, welcoming the weapons of the future."),
 			type: 'building',
 			cost: function() {
 				return {
 					'electricity': 3000,
 					'steel mining frame': 100,
-					'sulphur': 50
+					'PoW': 50
 				};
 			}
 		},
-		'torch': {
-			name: _('torch'),
+		'watch_tower': {
+			name: _('watch_tower'),
 			button: null,
 			type: 'tool',
-			buildMsg: _('a torch to keep the dark away'),
+			buildMsg: _('a watch_tower to keep the dark away'),
 			cost: function() {
 				return {
 					'electricity': 1,
-					'cloth': 1
+					'chip': 1
 				};
 			}
 		},
@@ -328,7 +328,7 @@ var Room = {
 				return {
 					'electricity': 200,
 					'steel mining frame': 50,
-					'sulphur': 50
+					'PoW': 50
 				};
 			}
 		}
@@ -356,7 +356,7 @@ var Room = {
 				};
 			}
 		},
-		'coal': {
+		'ether': {
 			type: 'good',
 			cost: function() {
 				return {
@@ -408,7 +408,7 @@ var Room = {
 				};
 			}
 		},
-		'grenade': {
+		'hash_attack': {
 			type: 'weapon',
 			cost: function() {
 				return {
@@ -436,7 +436,7 @@ var Room = {
 				};
 			}
 		},
-		'compass': {
+		'Bitcoin_Whitepaper': {
 			type: 'special',
 			maximum: 1,
 			cost: function() {
@@ -462,7 +462,7 @@ var Room = {
 			options
 		);
 		
-		Room.pathDiscovery = Boolean($SM.get('stores["compass"]'));
+		Room.pathDiscovery = Boolean($SM.get('stores["Bitcoin_Whitepaper"]'));
 
 		if(Engine._debug) {
 			this._ROOM_WARM_DELAY = 5000;
@@ -562,7 +562,7 @@ var Room = {
 				stores: {'electricity' : 2 }
 			});
 			Room.updateIncomeView();
-			Notifications.notify(Room, _("the stranger is standing by the fire. she says she can help. says she builds things."));
+			Notifications.notify(Room, _("Hal Finney email says he can help. He is basically saying he builds things."));
 		}
 
 		Engine.moveStoresView(null, transition_diff);
@@ -578,10 +578,10 @@ var Room = {
 			return null;
 		},
 		Freezing: { value: 0, text: _('freezing') },
-		Cold: { value: 1, text: _('slow') },
+		Cold: { value: 1, text: _('reckless') },
 		Mild: { value: 2, text: _('quite stable') },
 		Warm: { value: 3, text: _('fast') },
-		Hot: { value: 4, text: _('hot') }
+		Hot: { value: 4, text: _('trending') }
 	},
 	
 	FireEnum: {
@@ -597,7 +597,7 @@ var Room = {
 		Smoldering: { value: 1, text: _('smoldering') },
 		Flickering: { value: 2, text: _('flickering') },
 		Burning: { value: 3, text: _('watching') },
-		Roaring: { value: 4, text: _('roaring') }
+		Roaring: { value: 4, text: _('skeptical') }
 	},
 	
 	setTitle: function() {
@@ -672,7 +672,7 @@ var Room = {
 		Notifications.notify(Room, _("Banks are {0}", Room.FireEnum.fromInt($SM.get('game.fire.value')).text), true);
 		if($SM.get('game.fire.value') > 1 && $SM.get('game.builder.level') < 0) {
 			$SM.set('game.builder.level', 0);
-			Notifications.notify(Room, _("2012 Bubble is making national economy bleed. An interest to change the world is sparking in your head"));
+			Notifications.notify(Room, _("Economic Bubble is making national economy bleed. An interest to change the world is sparking in your head"));
 			Engine.setTimeout(Room.updateBuilderState, Room._BUILDER_STATE_DELAY);
 		}	
 		window.clearTimeout(Room._fireTimer);
@@ -685,7 +685,7 @@ var Room = {
 		var electricity = $SM.get('stores.electricity');
 		if($SM.get('game.fire.value') <= Room.FireEnum.Flickering.value &&
 			$SM.get('game.builder.level') > 3 && electricity > 0) {
-			Notifications.notify(Room, _("builder stokes the fire"), true);
+			Notifications.notify(Room, _("Hal Finney is excited about our project"), true);
 			$SM.set('stores.electricity', electricity - 1);
 			$SM.set('game.fire',Room.FireEnum.fromInt($SM.get('game.fire.value') + 1));
 		}
@@ -700,7 +700,7 @@ var Room = {
 		var old = $SM.get('game.temperature.value');
 		if($SM.get('game.temperature.value') > 0 && $SM.get('game.temperature.value') > $SM.get('game.fire.value')) {
 			$SM.set('game.temperature',Room.TempEnum.fromInt($SM.get('game.temperature.value') - 1));
-			Notifications.notify(Room, _("electricityoin network is {0}" , Room.TempEnum.fromInt($SM.get('game.temperature.value')).text), true);
+			Notifications.notify(Room, _("electricity in network is {0}" , Room.TempEnum.fromInt($SM.get('game.temperature.value')).text), true);
 		}
 		if($SM.get('game.temperature.value') < 4 && $SM.get('game.temperature.value') < $SM.get('game.fire.value')) {
 			$SM.set('game.temperature', Room.TempEnum.fromInt($SM.get('game.temperature.value') + 1));
@@ -715,7 +715,6 @@ var Room = {
 	unlockForest: function() {
 		$SM.set('stores.electricity', 4);
 		Outside.init();
-		Notifications.notify(Room, _("the wind howls outside"));
 		Notifications.notify(Room, _("We are having a lack of miners in the network"));
 		Engine.event('progress', 'outside');
 	},
@@ -723,7 +722,7 @@ var Room = {
 	updateBuilderState: function() {
 		var lBuilder = $SM.get('game.builder.level');
 		if(lBuilder === 0) {
-			Notifications.notify(Room, _("we have received an email from a guy called Hal Finney"));
+			Notifications.notify(Room, _("We have received an email from a guy called Hal Finney"));
 			lBuilder = $SM.setget('game.builder.level', 1);
 			Engine.setTimeout(Room.unlockForest, Room._NEED_WOOD_DELAY);
 		} 
@@ -757,7 +756,7 @@ var Room = {
 		if(stores.length === 0) {
 			stores = $('<div>').attr({
 				'id': 'stores',
-				'data-legend': _('stores')
+				'data-legend': _('Cypherpunk Room')
 			}).css('opacity', 0);
 			needsAppend = true;
 		}
@@ -880,7 +879,7 @@ var Room = {
 			Outside.updateVillage();
 		}
 
-		if($SM.get('stores.compass') && !Room.pathDiscovery){
+		if($SM.get('stores.Bitcoin_Whitepaper') && !Room.pathDiscovery){
 			Room.pathDiscovery = true;
 			Path.openPath();
 		}
@@ -952,7 +951,7 @@ var Room = {
 	build: function(buildBtn) {
 		var thing = $(buildBtn).attr('buildThing');
 		if($SM.get('game.temperature.value') <= Room.TempEnum.Cold.value) {
-			Notifications.notify(Room, _("builder just shivers"));
+			Notifications.notify(Room, _("Hal Finney just shivers"));
 			return false;
 		}
 		var craftable = Room.Craftables[thing];
@@ -1043,7 +1042,7 @@ var Room = {
 		if(Room.buttons[thing]) {
 			return true;
 		} else if($SM.get('game.buildings["trading post"]', true) > 0) {
-			if(thing == 'compass' || typeof $SM.get('stores["'+thing+'"]') != 'undefined') {
+			if(thing == 'Bitcoin_Whitepaper' || typeof $SM.get('stores["'+thing+'"]') != 'undefined') {
 				// Allow the purchase of stuff once you've seen it
 				return true;
 			}
@@ -1153,11 +1152,11 @@ var Room = {
 		}
 	},
 	
-	compassTooltip: function(direction){
+	Bitcoin_WhitepaperTooltip: function(direction){
 		var ttPos = $('div#resources').children().length > 10 ? 'top right' : 'bottom right';
 		var tt = $('<div>').addClass('tooltip ' + ttPos);
-		$('<div>').addClass('row_key').text(_('the compass points '+ direction)).appendTo(tt);
-		tt.appendTo($('#row_compass'));
+		$('<div>').addClass('row_key').text(_('the Bitcoin_Whitepaper points '+ direction)).appendTo(tt);
+		tt.appendTo($('#row_Bitcoin_Whitepaper'));
 	},
 	
 	handleStateUpdates: function(e){
