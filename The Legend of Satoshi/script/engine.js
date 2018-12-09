@@ -11,64 +11,64 @@
 
     Perks: {
       boxer: {
-        name: _("boxer"),
-        desc: _("punches do more damage"),
+        name: _("Monero"),
+        desc: _("anonymous transactions are safer"),
         /// TRANSLATORS : means with more force.
-        notify: _("learned to throw punches with purpose")
+        notify: _("learned to transfer anonimously")
       },
-      "martial artist": {
-        name: _("martial artist"),
-        desc: _("punches do even more damage."),
-        notify: _("learned to fight quite effectively without weapons")
+      "Litecoin": {
+        name: _("Litecoin"),
+        desc: _("a more frequent blocks emission leads to a smaller confirmation time"),
+        notify: _("learned to speed up confirmation time")
       },
-      "unarmed master": {
+      "Ethereum": {
         /// TRANSLATORS : master of unarmed combat
-        name: _("unarmed master"),
-        desc: _("punch twice as fast, and with even more force"),
-        notify: _("learned to strike faster without weapons")
+        name: _("Ethereum"),
+        desc: _("build smart contracts to avoid the involvement of third parties while contracting"),
+        notify: _("learned to build smart contracts")
       },
       barbarian: {
-        name: _("barbarian"),
-        desc: _("melee weapons deal more damage"),
-        notify: _("learned to swing weapons with force")
+        name: _("large mining pool"),
+        desc: _("joining a larger pool means having an higher probability of finding the solution to the calculation problem"),
+        notify: _("learned to join a larger mining pool")
       },
-      "slow metabolism": {
-        name: _("slow metabolism"),
-        desc: _("go twice as far without eating"),
-        notify: _("learned how to ignore the hunger")
+      "cheap electricity": {
+        name: _("cheap electricity"),
+        desc: _("cheaper electricity allows you to be more efficient while mining Bitcoins"),
+        notify: _("learned how to find cheaper electricity sources")
       },
-      "desert rat": {
-        name: _("desert rat"),
-        desc: _("go twice as far without drinking"),
-        notify: _("learned to love the dry air")
+      "voltage converter": {
+        name: _("voltage converter"),
+        desc: _("keep on mining in areas where the voltage is different"),
+        notify: _("learned to convert voltage")
       },
       evasive: {
-        name: _("evasive"),
-        desc: _("dodge attacks more effectively"),
-        notify: _("learned to be where they're not")
+        name: _("tor browser"),
+        desc: _("switch your IP address continuously"),
+        notify: _("learned to be untraceable")
       },
       precise: {
-        name: _("precise"),
-        desc: _("land blows more often"),
-        notify: _("learned to predict their movement")
+        name: _("candle stick"),
+        desc: _("price trends change really often"),
+        notify: _("learned to predict price changes")
       },
       scout: {
-        name: _("scout"),
-        desc: _("see farther"),
-        notify: _("learned to look ahead")
+        name: _("block explorer"),
+        desc: _("see latest transactions"),
+        notify: _("learned to explor Bitcoin transactions")
       },
       stealthy: {
-        name: _("stealthy"),
-        desc: _("better avoid conflict in the wild"),
-        notify: _("learned how not to be seen")
+        name: _("hardware wallet"),
+        desc: _("better avoid keeping private keys online"),
+        notify: _("learned how to secure your funds")
       },
       gasLightningome: {
-        name: _("gasLightningome"),
-        desc: _("restore more health when eating"),
-        notify: _("learned to make the most of food")
+        name: _("RaspiBlitz"),
+        desc: _("keep your IP fixed"),
+        notify: _("learned to keep your IP fixed")
       }
     },
-
+    
     options: {
       state: null,
       debug: false,
@@ -168,7 +168,7 @@
       if (typeof $SM.get("stores.electricity") != "undefined") {
         Outside.init();
       }
-      if ($SM.get("stores.compass", true) > 0) {
+      if ($SM.get("stores.Bitcoin_Whitepaper", true) > 0) {
         Path.init();
       }
       if ($SM.get("features.location.spaceShip")) {
