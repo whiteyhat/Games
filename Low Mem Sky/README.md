@@ -1,6 +1,6 @@
 # Low Mem Sky
 
-![Low Mem Sky](https://img.itch.zone/aW1hZ2UvMjk2MTM2LzE0NTAzMzYuZ2lm/347x500/dWS5oW.gif)
+![Low Mem Sky](https://img.itch.zone/aW1hZ2UvMjk2MTM2LzE2NzU2MTguZ2lm/794x1000/gU8gdA.gif)
 
 ## Intro
 You awake to find yourself on an alien planet, with the desire to achieve one thing... reach the centre of the galaxy!
