@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Skull Dude</title>
+    <script src='https://cdn1.kongregate.com/javascripts/kongregate_api.js'></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{{style('/css/utils/pico8')}}
+	{{style('/css/pixel')}}
+</head>
+
+<body>
+    <center>
+        <div>
+            <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+			<script async type="text/javascript" src="games/skulldude/skulldude.js"></script>
+			{{script('/js/utils/pico8')}}
+			<br>
+			<div class="buttons">
+			<button type="button" class='btn is-error' onclick="Module.pico8Reset();">Reset</button>
+            <button type="button" class='btn' onclick="Module.pico8TogglePaused();">Pause</button>
+			<button type="button" class='btn' onclick="Module.pico8ToggleSound();">Sound</button>
+			<button type="button" class='btn is-primary' onclick="Module.requestFullScreen(true, false);">Fullscreen</button>
+				
+		</div>
+        <br>
+        </div>
+    </center>
+    <br><br>
+    <link rel="stylesheet" href="/games/bcraft/webcontroller.css">
+    <script src="/games/bcraft/webcontroller.js"></script>
+</body>
+</html>
