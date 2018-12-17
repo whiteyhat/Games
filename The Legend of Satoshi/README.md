@@ -14,4 +14,4 @@ Deep into the inmersive & minimalistic text-based game about the story of bitcoi
 * In-game events with different outcomes
 
 ## Credits:
-This game is forked from from [A dark room](https://github.com/doublespeakgames/adarkroom) by [Double Speak Games](http://www.doublespeakgames.com/)
+This game is forked from [A dark room](https://github.com/doublespeakgames/adarkroom) by [Double Speak Games](http://www.doublespeakgames.com/)
