@@ -36,10 +36,10 @@
             <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
             <b class="input-error">Nick must be alphanumeric characters only!</b>
             <br />
-            <button type="button" data-toggle="modal" data-target="#joainAgar">PAY</button>
-            <a onclick="document.getElementById('spawn_cell').play();"><button id="startButton">Play</button></a>
-            <button id="spectateButton">Spectate</button>
-            <button id="settingsButton">Settings</button>
+            <button id="pay-button" class="agar-btn" type="button" data-toggle="modal" data-target="#joinAgar">PAY</button>
+            <a onclick="document.getElementById('spawn_cell').play();"><button class="agar-btn" id="startButton">Play</button></a>
+            <button class="agar-btn" id="spectateButton">Spectate</button>
+            <button class="agar-btn">Settings</button>
             <br />
             <div id="settings">
                 <h3>Settings</h3>
@@ -66,22 +66,23 @@
         </div>
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="joainAgar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    <div class="modal fade" id="joinAgar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Play Lightning Agar</h5>
+                        <center><h5 class="modal-title" id="exampleModalCenterTitle">Play Lightning Agar</h5></center>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img id="payreq" src="" alt="Invoice Request">
+                    <center><img id="loading" style="height:60px" src="img/loading.gif" alt="loading">
+                    <img id="payreq" style="display:none" src="" alt="Invoice Request"></center>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button id="check-button" type="button" class="btn btn-primary">check</button>
                 </div>
             </div>
         </div>
@@ -89,16 +90,44 @@
     <!-- JS -->
     <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
     <script>
+        var invoiceId;
         $(document).ready(function () {
             $('#pay-button').on('click', function () {
                 var request = $.ajax({
-                    url: "/agar",
+                    url: "http://localhost:3333/agar",
                     type: 'post',
                     dataType: 'json'
                 });
 
                 request.done(function (data) {
-                    $('#payreq').attr('src','https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + result.request);
+                    $('#loading').hide()
+                    $('#payreq').show()
+                    $('#payreq').attr('src','https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + data.request);
+                    invoiceId = data.id
+                });
+
+                request.fail(function (jqXHR, textStatus) {
+                    console.log(jqXHR)
+                    console.log(textStatus)
+                });
+            })
+
+            $('#check-button').on('click', function () {
+                var request = $.ajax({
+                    url: "http://localhost:3333/agarconfirm",
+                    data: {
+                        id: invoiceId
+                    },
+                    type: 'post',
+                    dataType: 'json'
+                });
+
+                request.done(function (data) {
+                    if (data.paid) {
+                    toast('success', "Invoice Paid")
+                    } else {
+                    toast('error', "Invoice not Paid")  
+                    }
                 });
 
                 request.fail(function (jqXHR, textStatus) {
