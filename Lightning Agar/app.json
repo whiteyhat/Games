@@ -1,11 +1,11 @@
 {
   "name": "agar-clone",
-  "description": "A simple Agar.io clone",
+  "description": "A lightning Agar clone",
   "scripts": {
     "build": "gulp build",
     "start": "gulp run",
     "watch": "gulp watch",
     "test": "gulp test"
   },
-  "repository": "https://github.com/huytd/agar.io-clone"
+  "repository": "https://github.com/Satoshis-Games/Games/tree/master/Lightning%20Agar"
 }
