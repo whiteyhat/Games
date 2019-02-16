@@ -4,7 +4,8 @@
 <head>
     <!-- Meta Properties -->
     <meta charset="UTF-8">
-    <title>Open Crypto Agar</title>
+    <title>Lightning Agar</title>
+    <link rel="icon" href="img/bolt.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <!-- CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -33,13 +34,13 @@
         <div id="startMenu">
             <center><img style="height:100px;" src="img/icon.png" alt="Lightning Agar"></center>
             <p> Lightning Agar</p>
-            <input type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
+            <input style="display:none" type="text" tabindex="0" autofocus placeholder="Enter your name here" id="playerNameInput" maxlength="25" />
             <b class="input-error">Nick must be alphanumeric characters only!</b>
             <br />
-            <button id="pay-button" class="agar-btn" type="button" data-toggle="modal" data-target="#joinAgar">PAY</button>
-            <a onclick="document.getElementById('spawn_cell').play();"><button class="agar-btn" id="startButton">Play</button></a>
-            <button class="agar-btn" id="spectateButton">Spectate</button>
-            <button class="agar-btn">Settings</button>
+            <a disabled id="main-btn" style="display:none" onclick="document.getElementById('spawn_cell').play();"><button class="agar-btn" id="startButton">START</button></a>
+            <button id="pay-button" class="agar-btn" type="button" data-toggle="modal" data-target="#joinAgar">Play</button>
+            <button style="display:none" class="agar-btn" id="spectateButton">Spectate</button>
+            <button style="display:none" class="agar-btn" id="settingsButton">Settings</button>
             <br />
             <div id="settings">
                 <h3>Settings</h3>
@@ -53,8 +54,9 @@
                     <label><input id="darkMode" type="checkbox">Toggle Dark Mode</label>
                 </ul>
             </div>
+            <br><br>
             <div id="instructions">
-                <h3>Gameplay</h3>
+                <h3>How to Play?</h3>
                 <ul>
                     <li>Move your mouse on the screen to move your character.</li>
                     <li>Eat food and other players in order to grow your character (food respawns every time a player
@@ -81,77 +83,86 @@
                     <img id="payreq" style="display:none" src="" alt="Invoice Request"></center>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id="check-button" type="button" class="btn btn-primary">check</button>
+                    <button id="check-button" type="button" class="btn btn-primary">Confirm</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- JS -->
     <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script>
-        var invoiceId;
-        $(document).ready(function () {
-            $('#pay-button').on('click', function () {
-                var request = $.ajax({
-                    url: "http://localhost:3333/agar",
-                    type: 'post',
-                    dataType: 'json'
-                });
-
-                request.done(function (data) {
-                    $('#loading').hide()
-                    $('#payreq').show()
-                    $('#payreq').attr('src','https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + data.request);
-                    invoiceId = data.id
-                });
-
-                request.fail(function (jqXHR, textStatus) {
-                    console.log(jqXHR)
-                    console.log(textStatus)
-                });
-            })
-
-            $('#check-button').on('click', function () {
-                var request = $.ajax({
-                    url: "http://localhost:3333/agarconfirm",
-                    data: {
-                        id: invoiceId
-                    },
-                    type: 'post',
-                    dataType: 'json'
-                });
-
-                request.done(function (data) {
-                    if (data.paid) {
-                    toast('success', "Invoice Paid")
-                    } else {
-                    toast('error', "Invoice not Paid")  
-                    }
-                });
-
-                request.fail(function (jqXHR, textStatus) {
-                    console.log(jqXHR)
-                    console.log(textStatus)
-                });
-            })
-        })
-
-        function toast(type, message) {
-            toastr.options.closeButton = true;
-            toastr.options.positionClass = 'toast-bottom-right';
-            toastr.options.showDuration = 300;
-            toastr.options.hideDuration = 1000;
-            toastr.options.timeOut = 5000;
-            toastr.options.extendedTimeOut = 1000;
-            toastr.options.preventDuplicates = true;
-            toastr[type](message);
-        }
-    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script src="js/app.js"></script>
+    <script>
+            var invoiceId;
+            $(document).ready(function () {
+                $('#pay-button').on('click', function () {
+                    var request = $.ajax({
+                        url: "http://localhost:3333/agar",
+                        type: 'post',
+                        dataType: 'json'
+                    });
+    
+                    request.done(function (data) {
+                        $('#loading').hide()
+                        $('#payreq').show()
+                        $('#payreq').attr('src','https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + data.request);
+                        invoiceId = data.id
+                        toast('info', 'Right away after you pay, click on confirm')
+                    });
+    
+                    request.fail(function (jqXHR, textStatus) {
+                        console.log(jqXHR)
+                        console.log(textStatus)
+                    });
+                })
+    
+                $('#check-button').on('click', function () {
+                    var request = $.ajax({
+                        url: "http://localhost:3333/agarconfirm",
+                        data: {
+                            id: invoiceId
+                        },
+                        type: 'post',
+                        dataType: 'json'
+                    });
+    
+                    request.done(function (data) {
+                        if (data.paid) {
+                        toast('success', "Invoice Paid")
+                        $('#main-btn').show()
+                        $('#close').hide()
+                        $('#check-button').hide()
+                        $('#playerNameInput').show()
+                        $('#pay-button').hide()
+                        $('#joinAgar').modal('hide')
+                        $('#spectateButton').hide()
+                        $('#settingsButton').show()
+                        document.getElementById("main-btn").disabled = false;
+                        } else {
+                        toast('error', "Invoice not Paid")  
+                        }
+                    });
+    
+                    request.fail(function (jqXHR, textStatus) {
+                        console.log(jqXHR)
+                        console.log(textStatus)
+                    });
+                })
+            })
+    
+            function toast(type, message) {
+                toastr.options.closeButton = true;
+                toastr.options.positionClass = 'toast-bottom-right';
+                toastr.options.showDuration = 300;
+                toastr.options.hideDuration = 1000;
+                toastr.options.timeOut = 5000;
+                toastr.options.extendedTimeOut = 1000;
+                toastr.options.preventDuplicates = true;
+                toastr[type](message);
+            }
+        </script>
 </body>
 
 </html>
