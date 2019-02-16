@@ -8,4 +8,4 @@ applications:
   domain: mybluemix.net
   timeout: 180
   env:
-    NPM_CONFIG_PRODUCTION: false
+    NPM_CONFIG_PRODUCTION: true
