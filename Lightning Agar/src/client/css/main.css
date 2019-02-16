@@ -155,7 +155,7 @@ div {
     box-shadow: 0 0 3px 1px #DDDDDD;
 }
 
-#startButton, #spectateButton {
+.agar-btn {
     position: relative;
     margin: auto;
     margin-top: 10px;
